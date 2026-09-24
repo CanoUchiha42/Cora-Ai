@@ -1445,10 +1445,10 @@
           </p>
 
           <div class="config-note">
-            <strong>Google-Forms-Konfiguration:</strong>
-            Tragen Sie unten im JavaScript die echte Action-URL und
-            die Feld-IDs ein. Ohne diese Werte läuft das Formular
-            sicher im Demo-Modus und sendet nichts an Google.
+            <strong>Lead-Erfassung:</strong>
+            Ihre Anfrage wird nach dem Absenden an das hinterlegte
+            Google-Formular übermittelt und dort in der verbundenen
+            Google-Tabelle gespeichert.
           </div>
 
         </form>
@@ -1553,22 +1553,22 @@
     */
 
     const GOOGLE_FORM_ACTION_URL =
-      "HIER_GOOGLE_FORM_ACTION_URL_EINTRAGEN";
+      "https://docs.google.com/forms/d/e/1FAIpQLScQkNDCHjpssgWRNol7mTNJFKR_YNvMq2cwY09vciOQZMOoAg/formResponse";
 
     const FORM_CONFIG = {
       actionUrl: GOOGLE_FORM_ACTION_URL,
 
       fields: {
-        name: "entry.NAME_ID",
-        company: "entry.COMPANY_ID",
-        email: "entry.EMAIL_ID",
-        phone: "entry.PHONE_ID",
+        name: "entry.372858985",
+        company: "entry.989903147",
+        email: "entry.1591318630",
+        phone: "entry.250623737",
 
-        /* Optional */
+        /* Diese Felder existieren im aktuellen Google-Formular nicht */
         size: "",
         service: "",
 
-        message: "entry.MESSAGE_ID"
+        message: "entry.280681394"
       }
     };
 
