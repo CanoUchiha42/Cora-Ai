@@ -1,0 +1,2190 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cora AI – KI-Webchatbots und Lead-Automatisierung</title>
+  <meta name="description" content="Cora AI beantwortet Kundenfragen, erfasst Leads und unterstützt Unternehmen bei der Automatisierung ihrer Website-Kommunikation.">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:title" content="Cora AI – KI-Webchatbots und Lead-Automatisierung">
+  <meta property="og:description" content="KI-Webchat, Wissensbasis, Lead-Erfassung und Übergabe an Teams.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="preview.png">
+  <meta property="og:image:alt" content="Cora AI Vorschaugrafik">
+
+  <!-- VOR LIVE-EINSATZ durch deine echte Domain ersetzen -->
+  <link rel="canonical" href="https://DEINE-DOMAIN.example/">
+
+  <!--
+    FAVICON:
+    favicon.png muss direkt neben index.html im GitHub-Repository liegen.
+
+    SOCIAL PREVIEW:
+    preview.png muss direkt neben index.html im GitHub-Repository liegen.
+  -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- OPTIONAL: Google Analytics Code hier einfügen.
+       Erst vor dem Live-Einsatz echten Google-Analytics-Code
+       mit deiner tatsächlichen Mess-ID einsetzen. -->
+
+  <style>
+    :root {
+      --blue: #4A90E2;
+      --green: #7ED321;
+      --ink: #1D1D1F;
+      --muted: #6e6e73;
+      --line: #e5e5e7;
+      --violet: #6c3cff;
+      --soft: #f7f7f8;
+      --danger: #b42318;
+      --success: #146c43;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a,
+    input,
+    select,
+    textarea {
+      outline-offset: 3px;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--violet);
+      outline-offset: 3px;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAVIGATION */
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.04em;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      color: #424245;
+      font-size: 14px;
+    }
+
+    .navlinks a:hover {
+      text-decoration: underline;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 12px;
+      padding: 9px 12px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding-bottom: 18px;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 13px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 13px 19px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .btn.blue {
+      background: var(--blue);
+    }
+
+    .btn.green {
+      background: var(--green);
+      color: #172000;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--ink);
+      border: 1px solid #c9c9ce;
+    }
+
+    /* HERO */
+
+    .hero {
+      text-align: center;
+      padding: 100px 0 82px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(46px, 7vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      max-width: 980px;
+      margin: 18px auto 28px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 32px;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 76px 0;
+    }
+
+    .sectionhead {
+      max-width: 760px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .sectionhead h2 {
+      margin: 0 0 14px;
+      font-size: 44px;
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .sectionhead p {
+      color: var(--muted);
+    }
+
+    /* FEATURES */
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      padding: 26px;
+      border-top: 3px solid var(--blue);
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* PRICING */
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #fff;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      letter-spacing: -0.03em;
+    }
+
+    .card .desc {
+      min-height: 50px;
+      color: var(--muted);
+    }
+
+    .price {
+      margin: 20px 0 4px;
+      font-size: 38px;
+      font-weight: 750;
+      letter-spacing: -0.04em;
+    }
+
+    .setup {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      color: #424245;
+    }
+
+    .card li {
+      margin: 10px 0;
+    }
+
+    .pro {
+      border: 2px solid var(--violet);
+      transform: translateY(-8px);
+    }
+
+    .badge {
+      position: absolute;
+      top: -14px;
+      left: 24px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--violet);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* ROI */
+
+    .roi {
+      padding: 50px;
+      border-radius: 32px;
+      background: var(--soft);
+    }
+
+    .roi h2 {
+      margin: 0 0 10px;
+      font-size: 40px;
+      letter-spacing: -0.04em;
+    }
+
+    .roi p {
+      color: var(--muted);
+    }
+
+    .roirow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    label {
+      display: block;
+      font-weight: 650;
+    }
+
+    .roi input,
+    .form-grid input,
+    .form-grid select,
+    .form-grid textarea {
+      width: 100%;
+      margin-top: 8px;
+      padding: 15px;
+      border: 1px solid #d2d2d7;
+      border-radius: 12px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 16px;
+    }
+
+    .roi input:focus,
+    .form-grid input:focus,
+    .form-grid select:focus,
+    .form-grid textarea:focus {
+      border-color: var(--violet);
+    }
+
+    .result {
+      margin-top: 24px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    /* FAQ */
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 21px 0;
+      border: 0;
+      background: none;
+      text-align: left;
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .faq-question[aria-expanded="true"]::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 42px 21px 0;
+      color: var(--muted);
+    }
+
+    /* CONTACT / FORM */
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .contact-copy {
+      padding-top: 12px;
+    }
+
+    .contact-copy h2 {
+      margin: 0 0 16px;
+      font-size: 44px;
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .contact-copy p {
+      color: var(--muted);
+    }
+
+    .lead-form {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field-full {
+      grid-column: 1 / -1;
+    }
+
+    .form-grid textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .required {
+      color: var(--danger);
+    }
+
+    .field-help {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .form-error {
+      min-height: 19px;
+      margin-top: 6px;
+      color: var(--danger);
+      font-size: 13px;
+    }
+
+    .form-status {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-weight: 650;
+    }
+
+    .form-status[hidden] {
+      display: none;
+    }
+
+    .form-status.success {
+      background: #eaf7f0;
+      color: var(--success);
+    }
+
+    .form-status.error {
+      background: #fff0ee;
+      color: var(--danger);
+    }
+
+    .privacy {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .config-note {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #f5f3ff;
+      color: #43308a;
+      font-size: 13px;
+    }
+
+    /* LEGAL */
+
+    .legal {
+      padding-top: 0;
+    }
+
+    .legal-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .legal-links a {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* BACK TO TOP */
+
+    .top-button {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 900;
+      display: none;
+      width: 46px;
+      height: 46px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
+
+    .top-button.visible {
+      display: inline-flex;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    #hidden_iframe {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 0;
+      visibility: hidden;
+    }
+
+    @media (max-width: 900px) {
+      .navlinks,
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .features,
+      .grid3,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .pro {
+        transform: none;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+
+      .sectionhead h2,
+      .contact-copy h2 {
+        font-size: 35px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .hero {
+        padding-bottom: 55px;
+      }
+
+      .roi {
+        padding: 28px 20px;
+      }
+
+      .roirow,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field-full {
+        grid-column: auto;
+      }
+
+      .lead-form {
+        padding: 22px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .actions .btn {
+        width: auto;
+        min-width: 180px;
+      }
+
+      h1 {
+        font-size: clamp(42px, 14vw, 62px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <div class="wrap nav-inner">
+
+      <a class="logo" href="#top" aria-label="Cora AI Startseite">
+        Cora AI
+      </a>
+
+      <div class="navlinks">
+        <a href="#funktionen">Funktionen</a>
+        <a href="#preise">Preise</a>
+        <a href="#roi">ROI-Rechner</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+
+      <a class="btn nav-cta" href="#kontakt">
+        Kontakt aufnehmen
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Menü öffnen">
+        Menü
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu wrap" aria-hidden="true">
+      <a href="#funktionen">Funktionen</a>
+      <a href="#preise">Preise</a>
+      <a href="#roi">ROI-Rechner</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- HERO -->
+
+    <header class="hero wrap">
+      <div class="eyebrow">AI Customer Operations</div>
+
+      <h1>
+        Ihre Website beantwortet Anfragen.
+        Auch wenn Ihr Team gerade nicht kann.
+      </h1>
+
+      <p>
+        Cora beantwortet wiederkehrende Fragen, erfasst Interessenten,
+        qualifiziert Anfragen und übergibt komplexe Fälle an Ihr Team.
+      </p>
+
+      <div class="actions">
+        <a class="btn blue" href="#kontakt">
+          Cora kennenlernen
+        </a>
+
+        <a class="btn" href="#roi">
+          ROI schätzen
+        </a>
+      </div>
+
+      <div class="note">
+        Entwickelt mit Blick auf eine DSGVO-konforme Implementierung.
+        Die konkrete Datenverarbeitung bleibt Verantwortung des jeweiligen Unternehmens.
+      </div>
+    </header>
+
+    <!-- FUNKTIONEN -->
+
+    <section id="funktionen" class="wrap">
+      <div class="sectionhead">
+        <h2>
+          Von der ersten Frage bis zum qualifizierten Lead.
+        </h2>
+
+        <p>
+          Kein reiner FAQ-Bot. Cora verbindet Wissen, Gespräche,
+          Leads, Übergaben und Auswertung in einem System.
+        </p>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <h3>24/7 Antworten</h3>
+          <p>
+            Website-Inhalte, FAQs und freigegebene
+            Unternehmensinformationen werden für Antworten genutzt.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Lead Engine</h3>
+          <p>
+            Interessenten können strukturiert nach Anliegen,
+            Kontaktdaten und konfigurierbaren Kriterien erfasst werden.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Human Handoff</h3>
+          <p>
+            Wenn Cora etwas nicht zuverlässig beantworten kann,
+            wird die Anfrage an das Team übergeben.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Wissensbasis</h3>
+          <p>
+            Website-Crawl, Dokumente und manuelle Inhalte
+            werden tenant-getrennt verarbeitet.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Analytics</h3>
+          <p>
+            Gespräche, Leads, Übergaben, häufige Fragen
+            und Wissenslücken werden sichtbar.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Mehrere Kunden</h3>
+          <p>
+            Die Plattform ist auf mandantenfähigen Betrieb
+            mit serverseitiger Entitlement- und Zugriffskontrolle ausgelegt.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PREISE -->
+
+    <section id="preise" class="wrap">
+
+      <div class="sectionhead">
+        <h2>Einfaches Preismodell.</h2>
+
+        <p>
+          Setup und laufender Betrieb sind getrennt ausgewiesen.
+          Enterprise wird individuell kalkuliert.
+        </p>
+      </div>
+
+      <div class="grid3">
+
+        <article class="card">
+
+          <h3>Cora Basic</h3>
+
+          <div class="desc">
+            Für Einzelunternehmen und kleine Teams.
+          </div>
+
+          <div class="price">895 €</div>
+          <div class="setup">einmalig · Setup</div>
+
+          <div class="price">495 €</div>
+          <div class="setup">pro Monat</div>
+
+          <ul>
+            <li>Web-Chat-Widget</li>
+            <li>Website + manuelle Wissensbasis</li>
+            <li>Lead-Erfassung</li>
+            <li>Basis-Analytics</li>
+            <li>2 Team-Sitze</li>
+            <li>EU-Multi-Tenant-Hosting</li>
+          </ul>
+
+          <a class="btn blue" href="#kontakt">
+            Basic anfragen
+          </a>
+
+        </article>
+
+        <article class="card pro">
+
+          <div class="badge">EMPFOHLEN</div>
+
+          <h3>Cora Pro</h3>
+
+          <div class="desc">
+            Für Unternehmen mit aktivem Vertrieb
+            und höherem Anfragevolumen.
+          </div>
+
+          <div class="price">1.495 €</div>
+          <div class="setup">einmalig · Setup</div>
+
+          <div class="price">895 €</div>
+          <div class="setup">pro Monat</div>
+
+          <ul>
+            <li>Alles aus Basic</li>
+            <li>WhatsApp-Anbindung</li>
+            <li>Lead-Qualifizierung &amp; Scoring</li>
+            <li>Terminbuchung</li>
+            <li>1 Standard-CRM + Webhooks</li>
+            <li>Erweiterte Analytics</li>
+            <li>5 Team-Sitze</li>
+          </ul>
+
+          <a class="btn" href="#kontakt">
+            Pro anfragen
+          </a>
+
+        </article>
+
+        <article class="card">
+
+          <h3>Cora Enterprise</h3>
+
+          <div class="desc">
+            Für mehrere Standorte, komplexe Prozesse
+            und individuelle Integrationen.
+          </div>
+
+          <div class="price">Individuell</div>
+          <div class="setup">Setup auf Anfrage</div>
+
+          <div class="price">Individuell</div>
+          <div class="setup">monatlich auf Anfrage</div>
+
+          <ul>
+            <li>Alles aus Pro</li>
+            <li>Custom Integrationen</li>
+            <li>Multi-Agent-Strukturen</li>
+            <li>SSO &amp; erweiterte RBAC</li>
+            <li>Audit-Logs</li>
+            <li>Dedicated-/Private-Hosting-Optionen</li>
+            <li>Individuelle SLA</li>
+          </ul>
+
+          <a class="btn" href="#kontakt">
+            Angebot anfragen
+          </a>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SCHNELLER ROI -->
+
+    <section class="wrap">
+
+      <div class="roi">
+
+        <h2>
+          Was könnte eine schnellere Reaktion wert sein?
+        </h2>
+
+        <p>
+          Nutzen Sie den Rechner als Szenario.
+          Die Ergebnisse sind Schätzwerte und keine Umsatzgarantie.
+        </p>
+
+        <div class="roirow">
+
+          <label for="visitors">
+            Website-Besucher/Monat
+
+            <input
+              id="visitors"
+              type="number"
+              value="5000"
+              min="0"
+              inputmode="numeric">
+          </label>
+
+          <label for="rate">
+            Anfragen- oder Lead-Rate (%)
+
+            <input
+              id="rate"
+              type="number"
+              value="2"
+              min="0"
+              step="0.1"
+              inputmode="decimal">
+          </label>
+
+        </div>
+
+        <div
+          class="result"
+          id="quickResult"
+          aria-live="polite">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ROI RECHNER -->
+
+    <section id="roi" class="wrap">
+
+      <div class="sectionhead">
+
+        <h2>ROI-Rechner</h2>
+
+        <p>
+          Für eine belastbarere Schätzung können Sie Besucher,
+          aktuelle Lead-Rate, Abschlussquote und Auftragswert einsetzen.
+        </p>
+
+      </div>
+
+      <div class="roi">
+
+        <div class="roirow">
+
+          <label for="v2">
+            Besucher/Monat
+
+            <input
+              id="v2"
+              type="number"
+              value="5000"
+              min="0">
+          </label>
+
+          <label for="r2">
+            Aktuelle Lead-Rate (%)
+
+            <input
+              id="r2"
+              type="number"
+              value="2"
+              min="0"
+              step="0.1">
+          </label>
+
+        </div>
+
+        <div class="roirow">
+
+          <label for="inc">
+            Zusätzliche Lead-Rate durch Szenario (%)
+
+            <input
+              id="inc"
+              type="number"
+              value="0.5"
+              min="0"
+              step="0.1">
+          </label>
+
+          <label for="close">
+            Abschlussquote (%)
+
+            <input
+              id="close"
+              type="number"
+              value="25"
+              min="0"
+              step="0.1">
+          </label>
+
+        </div>
+
+        <div class="roirow">
+
+          <label for="order">
+            Ø Auftragswert (€)
+
+            <input
+              id="order"
+              type="number"
+              value="1200"
+              min="0">
+          </label>
+
+          <label for="cost">
+            Monatliche Cora-Kosten (€)
+
+            <input
+              id="cost"
+              type="number"
+              value="895"
+              min="0">
+          </label>
+
+        </div>
+
+        <div
+          class="result"
+          id="roiResult"
+          aria-live="polite">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section id="faq" class="wrap">
+
+      <div class="sectionhead">
+
+        <h2>Häufige Fragen.</h2>
+
+        <p>
+          Die wichtigsten Punkte vor einer Anfrage.
+        </p>
+
+      </div>
+
+      <div class="faq">
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+            aria-expanded="false"
+            aria-controls="faq-a1">
+            Ist Cora ein klassischer FAQ-Bot?
+          </button>
+
+          <div
+            id="faq-a1"
+            class="faq-answer"
+            hidden>
+            Cora ist als Kombination aus Wissensbasis, Web-Chat,
+            Lead-Erfassung, Übergabe und Analytics konzipiert.
+            Der konkrete Funktionsumfang hängt vom gebuchten Paket
+            und der Implementierung ab.
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+            aria-expanded="false"
+            aria-controls="faq-a2">
+            Kann Cora komplexe Anfragen an Menschen übergeben?
+          </button>
+
+          <div
+            id="faq-a2"
+            class="faq-answer"
+            hidden>
+            Ja. Human Handoff ist als Funktion vorgesehen.
+            Die konkrete Übergabe an E-Mail, CRM, Ticketsystem
+            oder andere Kanäle wird je nach Setup konfiguriert.
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+            aria-expanded="false"
+            aria-controls="faq-a3">
+            Ist Cora automatisch DSGVO-konform?
+          </button>
+
+          <div
+            id="faq-a3"
+            class="faq-answer"
+            hidden>
+            Nein. Eine Website kann technische Vorkehrungen treffen,
+            aber die konkrete Datenschutzkonformität hängt unter anderem
+            von Datenflüssen, eingesetzten Anbietern, Verträgen,
+            Konfiguration und dem jeweiligen Unternehmen ab.
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+            aria-expanded="false"
+            aria-controls="faq-a4">
+            Wie werden Leads übermittelt?
+          </button>
+
+          <div
+            id="faq-a4"
+            class="faq-answer"
+            hidden>
+            Dieses statische Formular kann optional an ein Google-Formular
+            gesendet werden. Für einen produktiven Cora-Betrieb können
+            andere, passend konfigurierte Lead-Prozesse eingesetzt werden.
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+
+    <section id="kontakt" class="wrap">
+
+      <div class="contact-box">
+
+        <div class="contact-copy">
+
+          <div class="eyebrow">
+            Kontakt
+          </div>
+
+          <h2>
+            Bereit für den ersten Anwendungsfall?
+          </h2>
+
+          <p>
+            Starten Sie mit Website, Wissensbasis und Lead-Erfassung.
+            Weitere Kanäle können später ergänzt werden.
+          </p>
+
+          <a
+            class="btn secondary"
+            href="mailto:kontakt@ace-ai-agents.de?subject=Cora%20AI%20Anfrage">
+            Per E-Mail anfragen
+          </a>
+
+        </div>
+
+        <!--
+          Google Forms:
+          Die tatsächliche Übermittlung wird per JavaScript
+          an den unsichtbaren iframe weitergegeben.
+        -->
+
+        <form
+          id="leadForm"
+          class="lead-form"
+          method="POST"
+          target="hidden_iframe"
+          novalidate>
+
+          <h3>Projekt anfragen</h3>
+
+          <p class="field-help">
+            Pflichtfelder sind mit
+            <span class="required" aria-hidden="true">*</span>
+            markiert.
+          </p>
+
+          <div class="form-grid">
+
+            <div>
+              <label for="name">
+                Name
+                <span class="required" aria-hidden="true">*</span>
+              </label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Max Mustermann"
+                required
+                aria-describedby="nameError">
+
+              <div
+                id="nameError"
+                class="form-error"
+                aria-live="polite">
+              </div>
+            </div>
+
+            <div>
+              <label for="company">
+                Unternehmen
+                <span class="required" aria-hidden="true">*</span>
+              </label>
+
+              <input
+                id="company"
+                name="company"
+                type="text"
+                autocomplete="organization"
+                placeholder="Muster GmbH"
+                required
+                aria-describedby="companyError">
+
+              <div
+                id="companyError"
+                class="form-error"
+                aria-live="polite">
+              </div>
+            </div>
+
+            <div>
+              <label for="email">
+                E-Mail-Adresse
+                <span class="required" aria-hidden="true">*</span>
+              </label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="name@unternehmen.de"
+                required
+                aria-describedby="emailError">
+
+              <div
+                id="emailError"
+                class="form-error"
+                aria-live="polite">
+              </div>
+            </div>
+
+            <div>
+              <label for="phone">
+                Telefonnummer
+              </label>
+
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="+49 ...">
+            </div>
+
+            <div>
+              <label for="size">
+                Unternehmensgröße
+              </label>
+
+              <select
+                id="size"
+                name="company_size">
+
+                <option value="">
+                  Bitte auswählen
+                </option>
+
+                <option>1–10 Mitarbeitende</option>
+                <option>11–50 Mitarbeitende</option>
+                <option>51–250 Mitarbeitende</option>
+                <option>251–1.000 Mitarbeitende</option>
+                <option>1.001+ Mitarbeitende</option>
+
+              </select>
+            </div>
+
+            <div>
+              <label for="service">
+                Gewünschte Leistung
+              </label>
+
+              <select
+                id="service"
+                name="service">
+
+                <option value="">
+                  Bitte auswählen
+                </option>
+
+                <option>Cora Basic</option>
+                <option>Cora Pro</option>
+                <option>Cora Enterprise</option>
+                <option>Beratung / individuelle Lösung</option>
+
+              </select>
+            </div>
+
+            <div class="field-full">
+
+              <label for="message">
+                Anliegen
+                <span class="required" aria-hidden="true">*</span>
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Was möchten Sie mit Cora automatisieren?"
+                required
+                aria-describedby="messageError"></textarea>
+
+              <div
+                id="messageError"
+                class="form-error"
+                aria-live="polite">
+              </div>
+
+            </div>
+
+          </div>
+
+          <button
+            id="submitButton"
+            class="btn blue"
+            type="submit">
+            Anfrage absenden
+          </button>
+
+          <div
+            id="formStatus"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+            hidden>
+          </div>
+
+          <p class="privacy">
+            Mit dem Absenden stimmen Sie zu, dass Ihre Angaben zur
+            Bearbeitung Ihrer Anfrage verarbeitet werden. Bitte ergänzen
+            Sie vor dem öffentlichen Einsatz eine vollständige
+            Datenschutzerklärung.
+          </p>
+
+          <div class="config-note">
+            <strong>Google-Forms-Konfiguration:</strong>
+            Tragen Sie unten im JavaScript die echte Action-URL und
+            die Feld-IDs ein. Ohne diese Werte läuft das Formular
+            sicher im Demo-Modus und sendet nichts an Google.
+          </div>
+
+        </form>
+
+        <iframe
+          id="hidden_iframe"
+          name="hidden_iframe"
+          title="Unsichtbarer Übertragungsrahmen für das Leadformular">
+        </iframe>
+
+      </div>
+    </section>
+
+    <!-- RECHTLICHE PLATZHALTER -->
+
+    <section id="rechtliches" class="legal wrap">
+
+      <div class="sectionhead">
+
+        <h2>
+          Rechtliche Hinweise
+        </h2>
+
+        <p>
+          Diese Links sind bewusst Platzhalter und enthalten keine
+          erfundenen rechtlichen Angaben.
+        </p>
+
+      </div>
+
+      <div class="legal-links">
+
+        <a
+          href="#rechtliches"
+          aria-label="Datenschutzerklärung Platzhalter">
+          Datenschutzerklärung –
+          Platzhalter vor Live-Einsatz ersetzen
+        </a>
+
+        <a
+          href="#rechtliches"
+          aria-label="Impressum Platzhalter">
+          Impressum –
+          Platzhalter vor Live-Einsatz ersetzen
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ZURÜCK NACH OBEN -->
+
+  <button
+    id="topButton"
+    class="top-button"
+    type="button"
+    aria-label="Zum Seitenanfang">
+    ↑
+  </button>
+
+  <footer>
+    <div class="wrap">
+      Cora AI · Eine Lösung von Ace AI Agents · Preise inkl.
+      Setup- und Monatsangaben wie oben ausgewiesen.
+      Enterprise: individuelles Angebot.
+    </div>
+  </footer>
+
+  <script>
+    "use strict";
+
+    /*
+      ============================================================
+      GOOGLE FORMS KONFIGURATION
+      ============================================================
+
+      1. actionUrl:
+         Hier die echte Google-Forms-Action-URL eintragen.
+
+      2. fields:
+         Hier die jeweiligen entry.XXXXXXXX-IDs eintragen.
+
+      ERFORDERLICH:
+        name
+        company
+        email
+        message
+
+      OPTIONAL:
+        phone
+        size
+        service
+
+      Beispiel:
+
+      const GOOGLE_FORM_ACTION_URL =
+        "https://docs.google.com/forms/d/e/DEINE_ID/formResponse";
+
+      Die Website funktioniert ohne diese Angaben im Demo-Modus.
+    */
+
+    const GOOGLE_FORM_ACTION_URL =
+      "HIER_GOOGLE_FORM_ACTION_URL_EINTRAGEN";
+
+    const FORM_CONFIG = {
+      actionUrl: GOOGLE_FORM_ACTION_URL,
+
+      fields: {
+        name: "entry.NAME_ID",
+        company: "entry.COMPANY_ID",
+        email: "entry.EMAIL_ID",
+        phone: "entry.PHONE_ID",
+
+        /* Optional */
+        size: "",
+        service: "",
+
+        message: "entry.MESSAGE_ID"
+      }
+    };
+
+
+    /* ============================================================
+       HILFSFUNKTIONEN
+       ============================================================ */
+
+    const $ = (id) => document.getElementById(id);
+
+    const leadForm = $("leadForm");
+    const formStatus = $("formStatus");
+    const submitButton = $("submitButton");
+
+    let isSubmitting = false;
+
+
+    function euro(value) {
+      return new Intl.NumberFormat("de-DE", {
+        style: "currency",
+        currency: "EUR",
+        maximumFractionDigits: 0
+      }).format(value);
+    }
+
+
+    /* ============================================================
+       SCHNELLER ROI-RECHNER
+       ============================================================ */
+
+    function quick() {
+      const visitors = Number($("visitors").value) || 0;
+      const rate = Number($("rate").value) || 0;
+
+      const leads = visitors * rate / 100;
+
+      $("quickResult").innerHTML =
+        "<strong>Aktuelle geschätzte Leads:</strong> " +
+        leads.toFixed(1) +
+        " pro Monat." +
+        "<br>" +
+        '<span style="color:#6e6e73">' +
+        "Das ist eine Rechengröße, keine Prognose." +
+        "</span>";
+    }
+
+
+    /* ============================================================
+       DETAILLIERTER ROI-RECHNER
+       ============================================================ */
+
+    function calc() {
+      const visitors = Number($("v2").value) || 0;
+      const currentRate = Number($("r2").value) || 0;
+      const additionalRate = Number($("inc").value) || 0;
+      const closeRate = Number($("close").value) || 0;
+      const orderValue = Number($("order").value) || 0;
+      const cost = Number($("cost").value) || 0;
+
+      const currentLeads =
+        visitors * currentRate / 100;
+
+      const additionalLeads =
+        visitors * additionalRate / 100;
+
+      const additionalRevenue =
+        additionalLeads *
+        closeRate / 100 *
+        orderValue;
+
+      const net =
+        additionalRevenue - cost;
+
+      $("roiResult").innerHTML =
+        "<strong>Zusätzliche Leads im Szenario:</strong> " +
+        additionalLeads.toFixed(1) +
+        "<br>" +
+        "<strong>Geschätzter zusätzlicher Monatsumsatz:</strong> " +
+        euro(additionalRevenue) +
+        "<br>" +
+        "<strong>Nach Cora-Kosten:</strong> " +
+        euro(net) +
+        "<br>" +
+        '<span style="color:#6e6e73">' +
+        "Aktuelle Leads im Modell: " +
+        currentLeads.toFixed(1) +
+        ". Alle Werte sind Szenarien und keine Garantie." +
+        "</span>";
+    }
+
+
+    ["visitors", "rate"].forEach((id) => {
+      $(id).addEventListener("input", quick);
+    });
+
+    [
+      "v2",
+      "r2",
+      "inc",
+      "close",
+      "order",
+      "cost"
+    ].forEach((id) => {
+      $(id).addEventListener("input", calc);
+    });
+
+    quick();
+    calc();
+
+
+    /* ============================================================
+       MOBILES MENÜ
+       ============================================================ */
+
+    const menuToggle =
+      document.querySelector(".menu-toggle");
+
+    const mobileMenu =
+      $("mobile-menu");
+
+
+    function closeMenu() {
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        "Menü öffnen"
+      );
+
+      mobileMenu.classList.remove("open");
+
+      mobileMenu.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+      document.body.classList.remove(
+        "menu-open"
+      );
+    }
+
+
+    menuToggle.addEventListener("click", () => {
+
+      const open =
+        menuToggle.getAttribute(
+          "aria-expanded"
+        ) === "true";
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(!open)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        open
+          ? "Menü öffnen"
+          : "Menü schließen"
+      );
+
+      mobileMenu.classList.toggle(
+        "open",
+        !open
+      );
+
+      mobileMenu.setAttribute(
+        "aria-hidden",
+        String(open)
+      );
+
+      document.body.classList.toggle(
+        "menu-open",
+        !open
+      );
+    });
+
+
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach((link) => {
+        link.addEventListener(
+          "click",
+          closeMenu
+        );
+      });
+
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+
+    document
+      .querySelectorAll(".faq-question")
+      .forEach((button) => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            const expanded =
+              button.getAttribute(
+                "aria-expanded"
+              ) === "true";
+
+            const answer =
+              $(button.getAttribute(
+                "aria-controls"
+              ));
+
+            button.setAttribute(
+              "aria-expanded",
+              String(!expanded)
+            );
+
+            answer.hidden = expanded;
+          }
+        );
+
+      });
+
+
+    /* ============================================================
+       FORMULAR-FEHLER
+       ============================================================ */
+
+    function setError(id, message) {
+
+      const error =
+        $(id + "Error");
+
+      const field =
+        $(id);
+
+      error.textContent =
+        message;
+
+      if (message) {
+        field.setAttribute(
+          "aria-invalid",
+          "true"
+        );
+      } else {
+        field.removeAttribute(
+          "aria-invalid"
+        );
+      }
+    }
+
+
+    /* ============================================================
+       FORMULAR-VALIDIERUNG
+       ============================================================ */
+
+    function validateForm() {
+
+      const name =
+        $("name").value.trim();
+
+      const company =
+        $("company").value.trim();
+
+      const email =
+        $("email").value.trim();
+
+      const message =
+        $("message").value.trim();
+
+      const emailValid =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+          .test(email);
+
+
+      setError(
+        "name",
+        name
+          ? ""
+          : "Bitte geben Sie Ihren Namen ein."
+      );
+
+      setError(
+        "company",
+        company
+          ? ""
+          : "Bitte geben Sie Ihr Unternehmen ein."
+      );
+
+      setError(
+        "email",
+        emailValid
+          ? ""
+          : "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+      );
+
+      setError(
+        "message",
+        message
+          ? ""
+          : "Bitte beschreiben Sie kurz Ihr Anliegen."
+      );
+
+
+      return (
+        !!name &&
+        !!company &&
+        emailValid &&
+        !!message
+      );
+    }
+
+
+    /* ============================================================
+       STATUSMELDUNG
+       ============================================================ */
+
+    function showStatus(
+      type,
+      message
+    ) {
+
+      formStatus.className =
+        "form-status " + type;
+
+      formStatus.textContent =
+        message;
+
+      formStatus.hidden =
+        false;
+    }
+
+
+    /* ============================================================
+       GOOGLE FORMS KONFIGURIERT?
+       ============================================================ */
+
+    function isGoogleFormsConfigured() {
+
+      const requiredFields = [
+        FORM_CONFIG.fields.name,
+        FORM_CONFIG.fields.company,
+        FORM_CONFIG.fields.email,
+        FORM_CONFIG.fields.message
+      ];
+
+      const requiredFieldsConfigured =
+        requiredFields.every(
+          (value) =>
+            value &&
+            !value.includes("_ID")
+        );
+
+      const actionConfigured =
+        FORM_CONFIG.actionUrl &&
+        !FORM_CONFIG.actionUrl.includes(
+          "HIER_GOOGLE_FORM_ACTION_URL_EINTRAGEN"
+        );
+
+      return (
+        actionConfigured &&
+        requiredFieldsConfigured
+      );
+    }
+
+
+    /* ============================================================
+       GOOGLE FORMS ÜBER POST SENDEN
+       ============================================================ */
+
+    function submitToGoogleForms() {
+
+      const fields =
+        FORM_CONFIG.fields;
+
+
+      const values = {};
+
+
+      /*
+        Nur konfigurierte Felder werden übertragen.
+        Dadurch bleiben optionale Felder tatsächlich optional.
+      */
+
+      if (fields.name) {
+        values[fields.name] =
+          $("name").value.trim();
+      }
+
+      if (fields.company) {
+        values[fields.company] =
+          $("company").value.trim();
+      }
+
+      if (fields.email) {
+        values[fields.email] =
+          $("email").value.trim();
+      }
+
+      if (fields.phone) {
+        values[fields.phone] =
+          $("phone").value.trim();
+      }
+
+      if (fields.size) {
+        values[fields.size] =
+          $("size").value;
+      }
+
+      if (fields.service) {
+        values[fields.service] =
+          $("service").value;
+      }
+
+      if (fields.message) {
+        values[fields.message] =
+          $("message").value.trim();
+      }
+
+
+      const tempForm =
+        document.createElement(
+          "form"
+        );
+
+      tempForm.method =
+        "POST";
+
+      tempForm.action =
+        FORM_CONFIG.actionUrl;
+
+      tempForm.target =
+        "hidden_iframe";
+
+      tempForm.style.display =
+        "none";
+
+
+      Object.entries(values)
+        .forEach(([name, value]) => {
+
+          const input =
+            document.createElement(
+              "input"
+            );
+
+          input.type =
+            "hidden";
+
+          input.name =
+            name;
+
+          input.value =
+            value;
+
+          tempForm.appendChild(
+            input
+          );
+        });
+
+
+      document.body.appendChild(
+        tempForm
+      );
+
+      tempForm.submit();
+
+      tempForm.remove();
+    }
+
+
+    /* ============================================================
+       LEADFORMULAR
+       ============================================================ */
+
+    leadForm.addEventListener(
+      "submit",
+      (event) => {
+
+        event.preventDefault();
+
+
+        /* Schutz gegen Doppelklicks */
+        if (isSubmitting) {
+          return;
+        }
+
+
+        formStatus.hidden =
+          true;
+
+
+        if (!validateForm()) {
+
+          showStatus(
+            "error",
+            "Bitte korrigieren Sie die markierten Felder."
+          );
+
+          const firstInvalid =
+            leadForm.querySelector(
+              '[aria-invalid="true"]'
+            );
+
+          if (firstInvalid) {
+            firstInvalid.focus();
+          }
+
+          return;
+        }
+
+
+        isSubmitting =
+          true;
+
+        submitButton.disabled =
+          true;
+
+        submitButton.textContent =
+          "Wird gesendet …";
+
+
+        /* DEMO-MODUS */
+
+        if (!isGoogleFormsConfigured()) {
+
+          showStatus(
+            "error",
+            "Demo-Modus: Die Google-Forms-Konfiguration ist noch nicht eingetragen. Es wurden keine Daten versendet."
+          );
+
+          submitButton.disabled =
+            false;
+
+          submitButton.textContent =
+            "Anfrage absenden";
+
+          isSubmitting =
+            false;
+
+          return;
+        }
+
+
+        /* Echte Übermittlung */
+
+        submitToGoogleForms();
+
+
+        showStatus(
+          "success",
+          "Vielen Dank. Ihre Anfrage wurde zur Übermittlung gestartet."
+        );
+
+
+        leadForm.reset();
+
+
+        window.setTimeout(
+          () => {
+
+            submitButton.disabled =
+              false;
+
+            submitButton.textContent =
+              "Anfrage absenden";
+
+            isSubmitting =
+              false;
+
+          },
+          1800
+        );
+
+      }
+    );
+
+
+    /* ============================================================
+       ZURÜCK-NACH-OBEN
+       ============================================================ */
+
+    const topButton =
+      $("topButton");
+
+
+    topButton.addEventListener(
+      "click",
+      () => {
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+    );
+
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        topButton.classList.toggle(
+          "visible",
+          window.scrollY > 500
+        );
+
+      },
+      {
+        passive: true
+      }
+    );
+
+  </script>
+
+</body>
+</html>
