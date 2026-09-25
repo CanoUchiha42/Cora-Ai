@@ -1443,8 +1443,8 @@
 
           <div class="config-note">
             <strong>Lead-Erfassung:</strong>
-            Ihre Anfrage wird nach dem Absenden direkt über die
-            Cora Lead API in Google Sheets gespeichert.
+            Ihre Anfrage wird nach dem Absenden über die
+            Cora Lead API zur Verarbeitung an Google Sheets übermittelt.
             Google-Forms-Feld-IDs werden nicht benötigt.
           </div>
 
@@ -1529,7 +1529,7 @@
     */
 
     const CORA_LEAD_API_URL =
-      "https://script.google.com/macros/s/AKfycby_qAG4rak3iJ3QSRSMVwgqLV3_PtSCmsv5-n_rddcHLUtAeTEyePNe5DLQW3u7HhbS/exec";
+      "https://script.google.com/macros/s/AKfycbyUxCX70a8nHIrL2wKEdTBobWnXGS8mzoSznaehDuCyep1mbK8PZ2p6I0VTeEcpzpte/exec";
 
 
     /* ============================================================
@@ -1958,7 +1958,7 @@
 
           showStatus(
             "success",
-            "Vielen Dank. Ihre Anfrage wurde erfolgreich übermittelt."
+            "Vielen Dank. Ihre Anfrage wurde zur Verarbeitung übermittelt."
           );
 
           leadForm.reset();
