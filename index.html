@@ -1867,9 +1867,9 @@
 
     function isCoraLeadApiConfigured() {
       return (
-        CORA_LEAD_API_URL &&
-        !CORA_LEAD_API_URL.includes(
-          "HIER_DEINE_GOOGLE_APPS_SCRIPT_EXEC_URL_EINTRAGEN"
+        typeof CORA_LEAD_API_URL === "string" &&
+        /^https:\/\/script\.google\.com\/macros\/s\/[^\s/]+\/exec$/.test(
+          CORA_LEAD_API_URL.trim()
         )
       );
     }
