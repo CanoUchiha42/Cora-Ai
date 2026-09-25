@@ -676,7 +676,6 @@
       .hero {
         padding-bottom: 55px;
       }
-
       .roi {
         padding: 28px 20px;
       }
@@ -947,7 +946,6 @@
 
           <div class="price">Individuell</div>
           <div class="setup">monatlich auf Anfrage</div>
-
           <ul>
             <li>Alles aus Pro</li>
             <li>Custom Integrationen</li>
@@ -1214,9 +1212,9 @@
             id="faq-a4"
             class="faq-answer"
             hidden>
-            Dieses statische Formular kann optional an ein Google-Formular
-            gesendet werden. Für einen produktiven Cora-Betrieb können
-            andere, passend konfigurierte Lead-Prozesse eingesetzt werden.
+            Das statische Formular sendet die Lead-Daten direkt an
+            die Cora Lead API auf Google Apps Script. Von dort werden
+            sie strukturiert in Google Sheets gespeichert.
           </div>
 
         </div>
@@ -1254,9 +1252,9 @@
         </div>
 
         <!--
-          Google Forms:
-          Die tatsächliche Übermittlung wird per JavaScript
-          an den unsichtbaren iframe weitergegeben.
+          Cora Lead API:
+          Die statische GitHub-Pages-Seite sendet die
+          Formulardaten per POST an Google Apps Script.
         -->
 
         <form
@@ -1397,7 +1395,6 @@
 
               </select>
             </div>
-
             <div class="field-full">
 
               <label for="message">
@@ -1446,18 +1443,14 @@
 
           <div class="config-note">
             <strong>Lead-Erfassung:</strong>
-            Ihre Anfrage wird nach dem Absenden an das hinterlegte
-            Google-Formular übermittelt und dort in der verbundenen
-            Google-Tabelle gespeichert.
+            Ihre Anfrage wird nach dem Absenden direkt über die
+            Cora Lead API in Google Sheets gespeichert.
+            Google-Forms-Feld-IDs werden nicht benötigt.
           </div>
 
         </form>
 
-        <iframe
-          id="hidden_iframe"
-          name="hidden_iframe"
-          title="Unsichtbarer Übertragungsrahmen für das Leadformular">
-        </iframe>
+
 
       </div>
     </section>
@@ -1524,53 +1517,19 @@
 
     /*
       ============================================================
-      GOOGLE FORMS KONFIGURATION
+      CORA LEAD API KONFIGURATION
       ============================================================
 
-      1. actionUrl:
-         Hier die echte Google-Forms-Action-URL eintragen.
-
-      2. fields:
-         Hier die jeweiligen entry.XXXXXXXX-IDs eintragen.
-
-      ERFORDERLICH:
-        name
-        company
-        email
-        message
-
-      OPTIONAL:
-        phone
-        size
-        service
+      Nach dem Deploy des Google Apps Scripts hier die
+      veröffentlichte /exec-URL eintragen.
 
       Beispiel:
-
-      const GOOGLE_FORM_ACTION_URL =
-        "https://docs.google.com/forms/d/e/DEINE_ID/formResponse";
-
-      Die Website funktioniert ohne diese Angaben im Demo-Modus.
+      const CORA_LEAD_API_URL =
+        "https://script.google.com/macros/s/DEINE_DEPLOYMENT_ID/exec";
     */
 
-    const GOOGLE_FORM_ACTION_URL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSfsqmndghWJ0jxLfS0Ovp4sOWQ8wq0VW7s53WWJDTudEIGwTg/formResponse";
-
-    const FORM_CONFIG = {
-      actionUrl: GOOGLE_FORM_ACTION_URL,
-
-      fields: {
-        name: "entry.372858985",
-        company: "entry.989903147",
-        email: "entry.1591318630",
-        phone: "entry.250623737",
-
-        /* Diese Felder existieren im aktuellen Google-Formular nicht */
-        size: "",
-        service: "",
-
-        message: "entry.280681394"
-      }
-    };
+    const CORA_LEAD_API_URL =
+      "HIER_DEINE_GOOGLE_APPS_SCRIPT_EXEC_URL_EINTRAGEN";
 
 
     /* ============================================================
@@ -1776,7 +1735,6 @@
               button.getAttribute(
                 "aria-expanded"
               ) === "true";
-
             const answer =
               $(button.getAttribute(
                 "aria-controls"
@@ -1904,140 +1862,43 @@
 
 
     /* ============================================================
-       GOOGLE FORMS KONFIGURIERT?
+       CORA LEAD API KONFIGURIERT?
        ============================================================ */
 
-    function isGoogleFormsConfigured() {
-
-      const requiredFields = [
-        FORM_CONFIG.fields.name,
-        FORM_CONFIG.fields.company,
-        FORM_CONFIG.fields.email,
-        FORM_CONFIG.fields.message
-      ];
-
-      const requiredFieldsConfigured =
-        requiredFields.every(
-          (value) =>
-            value &&
-            !value.includes("_ID")
-        );
-
-      const actionConfigured =
-        FORM_CONFIG.actionUrl &&
-        !FORM_CONFIG.actionUrl.includes(
-          "HIER_GOOGLE_FORM_ACTION_URL_EINTRAGEN"
-        );
-
+    function isCoraLeadApiConfigured() {
       return (
-        actionConfigured &&
-        requiredFieldsConfigured
+        CORA_LEAD_API_URL &&
+        !CORA_LEAD_API_URL.includes(
+          "HIER_DEINE_GOOGLE_APPS_SCRIPT_EXEC_URL_EINTRAGEN"
+        )
       );
     }
 
 
     /* ============================================================
-       GOOGLE FORMS ÜBER POST SENDEN
+       CORA LEAD API ÜBER POST SENDEN
        ============================================================ */
 
-    function submitToGoogleForms() {
+    async function submitToCoraLeadApi() {
+      const payload = new URLSearchParams({
+        name: $("name").value.trim(),
+        company: $("company").value.trim(),
+        email: $("email").value.trim(),
+        phone: $("phone").value.trim(),
+        company_size: $("size").value,
+        service: $("service").value,
+        message: $("message").value.trim(),
+        source: "Cora Website"
+      });
 
-      const fields =
-        FORM_CONFIG.fields;
-
-
-      const values = {};
-
-
-      /*
-        Nur konfigurierte Felder werden übertragen.
-        Dadurch bleiben optionale Felder tatsächlich optional.
-      */
-
-      if (fields.name) {
-        values[fields.name] =
-          $("name").value.trim();
-      }
-
-      if (fields.company) {
-        values[fields.company] =
-          $("company").value.trim();
-      }
-
-      if (fields.email) {
-        values[fields.email] =
-          $("email").value.trim();
-      }
-
-      if (fields.phone) {
-        values[fields.phone] =
-          $("phone").value.trim();
-      }
-
-      if (fields.size) {
-        values[fields.size] =
-          $("size").value;
-      }
-
-      if (fields.service) {
-        values[fields.service] =
-          $("service").value;
-      }
-
-      if (fields.message) {
-        values[fields.message] =
-          $("message").value.trim();
-      }
-
-
-      const tempForm =
-        document.createElement(
-          "form"
-        );
-
-      tempForm.method =
-        "POST";
-
-      tempForm.action =
-        FORM_CONFIG.actionUrl;
-
-      tempForm.target =
-        "hidden_iframe";
-
-      tempForm.style.display =
-        "none";
-
-
-      Object.entries(values)
-        .forEach(([name, value]) => {
-
-          const input =
-            document.createElement(
-              "input"
-            );
-
-          input.type =
-            "hidden";
-
-          input.name =
-            name;
-
-          input.value =
-            value;
-
-          tempForm.appendChild(
-            input
-          );
-        });
-
-
-      document.body.appendChild(
-        tempForm
-      );
-
-      tempForm.submit();
-
-      tempForm.remove();
+      await fetch(CORA_LEAD_API_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+        },
+        body: payload.toString()
+      });
     }
 
 
@@ -2047,20 +1908,16 @@
 
     leadForm.addEventListener(
       "submit",
-      (event) => {
+      async (event) => {
 
         event.preventDefault();
-
 
         /* Schutz gegen Doppelklicks */
         if (isSubmitting) {
           return;
         }
 
-
-        formStatus.hidden =
-          true;
-
+        formStatus.hidden = true;
 
         if (!validateForm()) {
 
@@ -2081,68 +1938,54 @@
           return;
         }
 
-
-        isSubmitting =
-          true;
-
-        submitButton.disabled =
-          true;
-
-        submitButton.textContent =
-          "Wird gesendet …";
-
-
-        /* DEMO-MODUS */
-
-        if (!isGoogleFormsConfigured()) {
+        if (!isCoraLeadApiConfigured()) {
 
           showStatus(
             "error",
-            "Demo-Modus: Die Google-Forms-Konfiguration ist noch nicht eingetragen. Es wurden keine Daten versendet."
+            "Die Lead-Schnittstelle ist noch nicht verbunden. Es wurden keine Daten versendet."
           );
-
-          submitButton.disabled =
-            false;
-
-          submitButton.textContent =
-            "Anfrage absenden";
-
-          isSubmitting =
-            false;
 
           return;
         }
 
+        isSubmitting = true;
+        submitButton.disabled = true;
+        submitButton.textContent = "Wird gesendet …";
 
-        /* Echte Übermittlung */
+        try {
 
-        submitToGoogleForms();
+          await submitToCoraLeadApi();
 
+          showStatus(
+            "success",
+            "Vielen Dank. Ihre Anfrage wurde erfolgreich übermittelt."
+          );
 
-        showStatus(
-          "success",
-          "Vielen Dank. Ihre Anfrage wurde zur Übermittlung gestartet."
-        );
+          leadForm.reset();
 
+        } catch (error) {
 
-        leadForm.reset();
+          console.error(error);
 
+          showStatus(
+            "error",
+            "Die Anfrage konnte gerade nicht übermittelt werden. Bitte versuchen Sie es erneut."
+          );
 
-        window.setTimeout(
-          () => {
+        } finally {
 
-            submitButton.disabled =
-              false;
+          window.setTimeout(
+            () => {
 
-            submitButton.textContent =
-              "Anfrage absenden";
+              submitButton.disabled = false;
+              submitButton.textContent = "Anfrage absenden";
+              isSubmitting = false;
 
-            isSubmitting =
-              false;
+            },
+            1200
+          );
 
-          },
-          1800
-        );
+        }
 
       }
     );
@@ -2177,7 +2020,6 @@
           "visible",
           window.scrollY > 500
         );
-
       },
       {
         passive: true
