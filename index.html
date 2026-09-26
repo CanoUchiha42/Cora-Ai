@@ -401,7 +401,7 @@ if("IntersectionObserver" in window){const observer=new IntersectionObserver(ent
 
 // Cora demo state — context-aware local demo engine
 const APPS_SCRIPT_URL="https://script.google.com/macros/s/AKfycbzDrLyFEsCVSVqLphU7fiCrNo_slakHFf6R8JSHvqT-5Lr6Y5uxyBQbNshS0uzUXSHa/exec";
-const demoMessages=document.getElementById("demoMessages"),demoInput=document.getElementById("demoInput"),demoSend=document.getElementById("demoSend"),resetDemo=document.getElementById("demoReset");
+const demoMessages=document.getElementById("demoMessages"),demoInput=document.getElementById("demoInput"),demoSend=document.getElementById("demoSend"),resetButton=document.getElementById("resetDemo");
 const STATE_KEY="cora_ai_demo_v5";
 const INDUSTRIES={
  fitness:{label:"Fitnessstudio",terms:["fitnessstudio","fitness","gym","muckibude","personal trainer","probetraining"],questions:["Was ist Ihr Hauptziel – Muskelaufbau, Abnehmen, Ausdauer oder allgemeine Fitness?","Geht es um Probetraining, Mitgliedschaft, Kurs oder Personal Training?","Wann möchten Sie ungefähr starten oder einen Termin wahrnehmen?"]},
@@ -514,7 +514,7 @@ function resetDemo(){state=fresh();try{sessionStorage.removeItem(STATE_KEY)}catc
 demoSend?.addEventListener("click",()=>sendDemo(demoInput?.value||""));
 demoInput?.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();sendDemo(demoInput.value)}});
 document.querySelectorAll("[data-prompt]").forEach(b=>b.addEventListener("click",()=>sendDemo(b.dataset.prompt)));
-resetDemo?.addEventListener("click",resetDemo);
+resetButton?.addEventListener("click",resetDemo);
 resetDemo();
 
 // ROI calculator
