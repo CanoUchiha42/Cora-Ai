@@ -2,551 +2,105 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cora AI – Ihre Website arbeitet für Sie | Ace AI Agents</title>
-<meta name="description" content="Cora AI beantwortet Website-Fragen, qualifiziert Interessenten und nimmt Anfragen rund um die Uhr entgegen. KI-Webassistenz für Unternehmen.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cora AI – Ihre Website arbeitet für Sie | ACE AI AGENTS</title>
+<meta name="description" content="Cora AI macht aus Ihrer Website einen digitalen Mitarbeiter: Fragen beantworten, Interessenten qualifizieren und Anfragen strukturiert aufnehmen.">
 <meta name="robots" content="index,follow">
+<meta name="theme-color" content="#060609">
 <link rel="canonical" href="https://canouchiha42.github.io/Cora-Ai/">
 <meta property="og:title" content="Cora AI – Ihre Website arbeitet für Sie">
-<meta property="og:description" content="KI-Webassistenz für Fragen, Leads und Kundenkommunikation.">
+<meta property="og:description" content="Fragen beantworten. Bedarf verstehen. Qualifizierte Anfragen vorbereiten. Direkt auf Ihrer Website.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://canouchiha42.github.io/Cora-Ai/">
-<meta name="theme-color" content="#07070a">
 <style>
-:root{--bg:#07070a;--bg2:#0c0c11;--panel:#111118;--panel2:#15151d;--text:#f7f7f8;--muted:#a4a4ad;--line:rgba(255,255,255,.11);--purple:#7c5cff;--purple2:#3b82f6;--blue:#3b82f6;--green:#10b981;--violet:#8b5cf6;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,Arial,sans-serif;line-height:1.55;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 8%,rgba(124,77,255,.15),transparent 28%),radial-gradient(circle at 10% 35%,rgba(91,45,224,.09),transparent 25%);z-index:-1}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a,input,select,textarea{outline-offset:4px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #a98cff}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(7,7,10,.72);backdrop-filter:blur(22px)}.navin{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.04em;font-size:20px}.brand span{color:#a98cff}.links{display:flex;gap:28px;color:#b8b8c1;font-size:14px}.links a:hover{color:#fff}.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 18px;font-weight:700;border:1px solid var(--line);cursor:pointer;transition:.25s ease}.navcta,.btn.primary{background:#fff;color:#08080b;border-color:#fff}.btn.primary:hover,.navcta:hover{transform:translateY(-1px);box-shadow:0 12px 32px rgba(255,255,255,.12)}.btn.secondary{background:rgba(255,255,255,.04);color:#fff}.btn:disabled{opacity:.55;cursor:not-allowed;transform:none!important}.btn.secondary:hover{background:rgba(255,255,255,.08)}.menu{display:none;background:none;color:#fff;border:0;font-size:22px}.hero{padding:110px 0 80px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#c9baff;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:#8d6bff;box-shadow:0 0 18px #8d6bff}.hero h1{font-size:clamp(50px,8vw,92px);line-height:.94;letter-spacing:-.075em;max-width:980px;margin:22px auto 28px}.gradient{background:linear-gradient(105deg,#fff 20%,#c9baff 62%,#8d6bff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:710px;margin:auto;color:var(--muted);font-size:20px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:32px 0 0}.hero-note{margin-top:17px;color:#72727c;font-size:12px}.visual{margin:70px auto 0;max-width:1030px;border:1px solid var(--line);border-radius:30px;padding:10px;background:rgba(255,255,255,.035);box-shadow:0 35px 100px rgba(0,0,0,.35)}.browser{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#0e0e14;text-align:left}.browserbar{height:44px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 15px}.dot{width:8px;height:8px;border-radius:50%;background:#555}.browserbody{display:grid;grid-template-columns:1fr 360px;min-height:430px}.sitecopy{padding:55px}.mini-label{color:#8d6bff;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.sitecopy h3{font-size:42px;line-height:1;letter-spacing:-.055em;margin:12px 0}.sitecopy p{color:#8f8f9a;max-width:470px}.chat{margin:35px 35px 35px 0;background:#f8f8fa;color:#101014;border-radius:24px;padding:18px;box-shadow:0 25px 70px rgba(0,0,0,.35)}.chathead{display:flex;align-items:center;gap:10px;padding-bottom:14px;border-bottom:1px solid #e5e5e8;font-weight:750}.avatar{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,#7c4dff,#b79cff)}.msg{padding:12px 13px;border-radius:15px;margin-top:13px;font-size:13px;line-height:1.45}.user{background:#eeeef2;margin-left:25px}.ai{background:#f0eaff}.chatinput{margin-top:14px;padding:11px 12px;border:1px solid #dddde3;border-radius:12px;color:#8a8a92;font-size:12px}.section{padding:105px 0}.sectionhead{max-width:750px;margin-bottom:48px}.center{text-align:center;margin-left:auto;margin-right:auto}.kicker{color:#9c82ff;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.section h2{font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-.065em;margin:12px 0 18px}.sectionhead p{color:var(--muted);font-size:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:24px;padding:28px;transition:.3s ease}.card:hover{transform:translateY(-3px);border-color:rgba(167,139,255,.35)}.num{color:#7760c9;font-size:12px;font-weight:800}.card h3{font-size:22px;letter-spacing:-.03em;margin:24px 0 9px}.card p{color:#92929d;margin:0}.featureicon{width:42px;height:42px;border-radius:13px;background:rgba(124,77,255,.13);border:1px solid rgba(153,126,255,.2);display:grid;place-items:center;color:#bca8ff;font-weight:800}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.flow .card{position:relative}.arrow{position:absolute;right:-17px;top:50%;color:#5e5e68;z-index:2}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{border:1px solid var(--line);border-radius:28px;background:var(--panel);padding:38px}.panel h3{font-size:30px;letter-spacing:-.04em;margin:0 0 12px}.panel p{color:var(--muted)}.check{display:flex;gap:10px;margin:14px 0;color:#d5d5db}.check b{color:#9d83ff}.industry{min-height:190px}.industry strong{display:block;font-size:19px;margin-bottom:8px}.security{background:linear-gradient(145deg,#12111b,#0c0c11);border:1px solid rgba(155,126,255,.2);border-radius:30px;padding:48px}.securitygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:35px}.security small{color:#9d9da7}.pricing{align-items:stretch}.pricecard{display:flex;flex-direction:column}.pricecard.pro{border-color:rgba(145,112,255,.7);box-shadow:0 25px 70px rgba(82,45,190,.13)}.badge{display:inline-flex;width:max-content;padding:6px 10px;border-radius:999px;background:#24164d;color:#c8b9ff;font-size:10px;font-weight:800;letter-spacing:.08em}.price{font-size:46px;font-weight:800;letter-spacing:-.06em;margin-top:22px}.per{color:#858590;font-size:13px}.pricecard ul{padding:0;list-style:none;color:#b7b7c0;margin:25px 0 30px}.pricecard li{margin:11px 0}.pricecard li:before{content:"✓";color:#a88dff;margin-right:9px}.pricecard .btn{margin-top:auto}.demo{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.demo-options button{display:block;width:100%;text-align:left;background:none;color:#aaaab4;border:1px solid var(--line);padding:14px;border-radius:14px;margin:9px 0;cursor:pointer}.demo-options button.active,.demo-options button:hover{color:#fff;background:rgba(124,77,255,.1);border-color:rgba(155,126,255,.35)}.demo-chat{min-height:350px;display:flex;flex-direction:column;background:#fff!important;color:#111!important;border:1px solid #d9d9df;box-shadow:0 18px 50px rgba(0,0,0,.18)}.demo-chat .chathead{color:#111;border-bottom-color:#e2e2e7}.demo-chat .chathead small{color:#666!important}.demo-chat .msg{color:#111!important;background:#f1f1f4;border:1px solid #e1e1e6;box-shadow:none}.demo-chat .msg.user{background:#e7e7eb;color:#111!important}.demo-chat .msg.ai{background:#f5f1ff;color:#111!important;border-color:#ded4ff}.demo-chat .msg a{color:#4b35b8}.demo-messages{flex:1;max-height:430px;overflow:auto;padding:4px 4px 4px 0}.demo-messages::-webkit-scrollbar{width:8px}.demo-messages::-webkit-scrollbar-thumb{background:#c9c9d0;border-radius:99px}.demo-compose{display:flex;gap:8px;margin-top:14px}.demo-compose input{min-width:0;flex:1;border:1px solid #cfcfd6;border-radius:12px;padding:12px;color:#111;background:#fff}.demo-compose input::placeholder{color:#707078;opacity:1}.demo-compose button{border:0;border-radius:12px;padding:0 15px;background:#111;color:#fff;font-weight:750;cursor:pointer}.demo-compose button:disabled{opacity:.45}.typing{display:inline-flex;gap:4px;align-items:center}.typing i{width:5px;height:5px;border-radius:50%;background:#777;animation:blink 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}@keyframes blink{0%,60%,100%{opacity:.25}30%{opacity:1}}.faq{max-width:850px;margin:auto}.faqitem{border-top:1px solid var(--line)}.faqq{width:100%;display:flex;justify-content:space-between;gap:20px;background:none;border:0;color:#fff;text-align:left;padding:22px 0;font-weight:700;cursor:pointer}.faqans{color:#92929d;padding:0 40px 22px 0}.faqans[hidden]{display:none}.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:start}.form{background:#f7f7f9;color:#111;border-radius:28px;padding:30px}.form h3{margin-top:0;font-size:28px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field.full{grid-column:1/-1}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;border:1px solid #dddde2;border-radius:12px;padding:13px;background:#fff;color:#111}.field textarea{min-height:130px;resize:vertical}.form .btn{margin-top:17px}.status{margin-top:14px;padding:12px;border-radius:12px;font-size:13px}.status.success{background:#e7f8ef;color:#146c43}.status.error{background:#ffeceb;color:#a21c16}.status[hidden]{display:none}.privacy{color:#777;font-size:11px;margin-bottom:0}.roi-shell{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}.roi-panel{background:#fff;color:#111;border-radius:28px;padding:30px}.roi-panel.dark{background:linear-gradient(145deg,#11111a,#0b0b10);color:#fff;border:1px solid var(--line)}.roi-field{margin:0 0 20px}.roi-field label{display:flex;justify-content:space-between;gap:15px;font-size:13px;font-weight:750;margin-bottom:8px}.roi-field small{display:block;color:#777;font-weight:500;margin-top:5px}.roi-field input[type=number],.roi-field select{width:100%;border:1px solid #dddde3;border-radius:12px;padding:12px;background:#fff;color:#111}.roi-field input[type=range]{width:100%;accent-color:#7c5cff}.roi-value{font-variant-numeric:tabular-nums;color:#7c5cff}.roi-results{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.roi-card{border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.045);border-radius:18px;padding:18px}.roi-card span{display:block;color:#92929d;font-size:12px}.roi-card strong{display:block;font-size:27px;letter-spacing:-.045em;margin-top:5px}.roi-card.primary strong{color:#34d399}.roi-note{color:#777;font-size:11px;margin:18px 0 0}.roi-cta{margin-top:22px;padding:18px;border-radius:18px;background:rgba(124,92,255,.1);border:1px solid rgba(124,92,255,.2)}.roi-cta p{margin:0 0 12px;color:#c7c7d0;font-size:14px}.roi-mini{font-size:12px;color:#777;margin-top:12px}.footer{border-top:1px solid var(--line);padding:45px 0;color:#777;font-size:13px}.footerin{display:flex;justify-content:space-between;gap:20px}.footerlinks{display:flex;gap:18px}.mobilelinks{display:none;padding:15px 0 20px}.mobilelinks a{display:block;padding:10px 0;color:#aaa}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}@media(max-width:900px){.links,.navcta{display:none}.menu{display:block}.mobilelinks.open{display:block}.browserbody,.split,.contact,.demo{grid-template-columns:1fr}.chat{margin:0 25px 25px}.sitecopy{padding:38px}.grid3,.flow,.securitygrid{grid-template-columns:1fr 1fr}.arrow{display:none}.browserbody{min-height:auto}}@media(max-width:620px){.roi-shell{grid-template-columns:1fr}.roi-results{grid-template-columns:1fr 1fr}.roi-card strong{font-size:23px}.demo-options button{padding:15px}.demo-messages{max-height:48vh}.demo-compose input{font-size:16px}.demo-compose button{min-width:52px}.chat{border-radius:20px}.wrap{width:min(var(--max),calc(100% - 28px))}.hero{padding:78px 0 55px}.hero h1{font-size:clamp(45px,15vw,65px)}.hero p{font-size:17px}.section{padding:75px 0}.grid3,.flow,.securitygrid,.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.browserbody{display:block}.sitecopy{padding:30px}.sitecopy h3{font-size:32px}.chat{margin:0 16px 16px}.security,.panel{padding:28px}.actions .btn{width:100%}.footerin{flex-direction:column}.footerlinks{flex-wrap:wrap}.price{font-size:40px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
-</style>
-<style id="cora-premium-overrides">
-/* Cora premium visual system */
-:root{
-  --bg:#050507;--bg2:#09090d;--panel:#0d0d13;--panel2:#12121a;
-  --text:#f7f7f8;--muted:#9b9ba6;--line:rgba(255,255,255,.10);
-  --purple:#7c5cff;--blue:#4f8cff;--green:#19c88a;--max:1180px;
-}
-html{scroll-behavior:smooth;scroll-padding-top:92px}
-body{
-  background:
-    radial-gradient(900px 520px at 82% -10%,rgba(124,92,255,.18),transparent 62%),
-    radial-gradient(760px 520px at -10% 32%,rgba(59,130,246,.10),transparent 62%),
-    #050507;
-}
-body:after{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;
-  background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
-  background-size:72px 72px;
-  mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 72%);
-}
-.nav{
-  background:rgba(5,5,7,.78);
-  border-bottom:1px solid rgba(255,255,255,.07);
-  transition:background .3s ease,box-shadow .3s ease;
-}
-.nav.scrolled{background:rgba(5,5,7,.94);box-shadow:0 12px 40px rgba(0,0,0,.28)}
-.navin{height:76px}
-.brand{font-size:19px}
-.links{gap:24px}
-.links a{transition:color .2s ease,opacity .2s ease}
-.links a:hover{color:#fff}
-.hero{position:relative;padding:118px 0 92px;isolation:isolate}
-.hero:before{
-  content:"";position:absolute;left:50%;top:45px;width:760px;height:520px;transform:translateX(-50%);
-  background:radial-gradient(circle,rgba(124,92,255,.15),transparent 66%);
-  filter:blur(10px);z-index:-1;animation:coraPulse 7s ease-in-out infinite;
-}
-.hero h1{max-width:1050px}
-.hero p{color:#b2b2bc;max-width:760px}
-.hero .actions .btn{min-width:175px}
-.btn,.navcta{transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
-.btn.secondary{border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.045)}
-.visual{
-  position:relative;margin-top:76px;
-  border-color:rgba(255,255,255,.10);
-  background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018));
-  box-shadow:0 40px 120px rgba(0,0,0,.42);
-}
-.visual:before{
-  content:"";position:absolute;inset:-1px;border-radius:31px;pointer-events:none;
-  background:linear-gradient(120deg,rgba(124,92,255,.24),transparent 35%,rgba(59,130,246,.12),transparent 75%);
-  opacity:.7;
-}
-.browser{position:relative;background:#0a0a0f;border-color:rgba(255,255,255,.09)}
-.browserbar{background:rgba(255,255,255,.018)}
-.dot{background:#5b5b65}
-.dot:first-child{background:#ff6b6b}.dot:nth-child(2){background:#f6c344}.dot:nth-child(3){background:#35c978}
-.sitecopy h3{font-size:clamp(34px,4vw,48px)}
-.sitecopy p{color:#9696a1}
-.chat{
-  position:relative;background:#f8f8fa;color:#111!important;
-  border:1px solid #e2e2e7;box-shadow:0 25px 80px rgba(0,0,0,.42);
-}
-.chat *{color:#111}
-.chat .chathead small{color:#6f6f78!important}
-.chat .msg{color:#111!important}
-.chat .msg.user{background:#e9e9ee}
-.chat .msg.ai{background:#eee8ff}
-.section{position:relative}
-.sectionhead p{color:#a1a1ab}
-.card{
-  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
-  border-color:rgba(255,255,255,.09);
-  box-shadow:0 12px 40px rgba(0,0,0,.10);
-}
-.card:hover{transform:translateY(-5px);box-shadow:0 20px 55px rgba(0,0,0,.20);border-color:rgba(139,110,255,.34)}
-.featureicon{box-shadow:inset 0 0 20px rgba(124,92,255,.08)}
-/* Demo: high-contrast product UI */
-#demo .demo-chat{
-  background:#ffffff!important;
-  color:#111111!important;
-  border:1px solid #d4d4dc!important;
-  border-radius:26px;
-  box-shadow:0 24px 70px rgba(0,0,0,.30),0 0 0 1px rgba(255,255,255,.08);
-  overflow:hidden;
-  padding:22px;
-}
-#demo .demo-chat *{color:#111111}
-#demo .demo-chat .chathead{
-  color:#111111!important;
-  background:#fff;
-  border-bottom:1px solid #dedee5;
-  padding-bottom:16px;
-}
-#demo .demo-chat .chathead span{color:#111111!important;font-weight:800}
-#demo .demo-chat .chathead small{color:#65656e!important}
-#demo .demo-chat .avatar{box-shadow:0 5px 18px rgba(124,77,255,.24)}
-#demo .demo-messages{
-  min-height:270px;max-height:430px;padding:10px 4px 8px 0;
-  scrollbar-width:thin;scrollbar-color:#c3c3cc transparent;
-}
-#demo .demo-messages::-webkit-scrollbar{width:8px}
-#demo .demo-messages::-webkit-scrollbar-thumb{background:#c3c3cc;border-radius:99px}
-#demo .demo-chat .msg{
-  color:#111111!important;
-  background:#f0f0f4!important;
-  border:1px solid #dedee5!important;
-  border-radius:17px;
-  box-shadow:0 5px 15px rgba(0,0,0,.05);
-  font-size:14px;
-}
-#demo .demo-chat .msg.user{
-  color:#111111!important;background:#e8e8ed!important;border-color:#d7d7df!important;
-}
-#demo .demo-chat .msg.ai{
-  color:#111111!important;background:#f1edff!important;border-color:#d9ceff!important;
-}
-#demo .demo-chat .msg a{color:#4b35b8!important}
-#demo .demo-compose{padding-top:4px;border-top:1px solid #ededf0}
-#demo .demo-compose input{
-  color:#111111!important;background:#fff!important;border:1px solid #bfc0c8!important;
-  box-shadow:inset 0 1px 2px rgba(0,0,0,.04);
-}
-#demo .demo-compose input::placeholder{color:#686870!important;opacity:1}
-#demo .demo-compose button{
-  min-height:48px;background:#111!important;color:#fff!important;border:1px solid #111;
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
-}
-#demo .demo-compose button:hover{background:#2b2b31!important;transform:translateY(-1px)}
-#demo .demo-chat>div:last-child{color:#686870!important}
-#demo .demo-chat>div:last-child *{color:inherit!important}
-#demo .demo-options button{
-  position:relative;transition:.25s ease;
-  color:#b9b9c2;
-}
-#demo .demo-options button:hover,#demo .demo-options button.active{
-  color:#fff;background:linear-gradient(90deg,rgba(124,92,255,.13),rgba(124,92,255,.04));
-  border-color:rgba(124,92,255,.42);transform:translateX(3px);
-}
-#demo .demo-options .card{background:rgba(255,255,255,.035)}
-/* ROI */
-#roi .roi-panel{box-shadow:0 20px 70px rgba(0,0,0,.18)}
-#roi .roi-panel.dark{box-shadow:0 25px 80px rgba(0,0,0,.25)}
-#roi .roi-card{transition:transform .25s ease,border-color .25s ease}
-#roi .roi-card:hover{transform:translateY(-2px);border-color:rgba(124,92,255,.25)}
-/* Pricing */
-.pricecard.pro{position:relative;overflow:hidden}
-.pricecard.pro:before{
-  content:"";position:absolute;left:0;right:0;top:0;height:2px;
-  background:linear-gradient(90deg,#7c5cff,#4f8cff,#19c88a);
-}
-/* security */
-.security{box-shadow:0 25px 90px rgba(0,0,0,.20)}
-/* reveal motion */
-.reveal{opacity:0;transform:translateY(28px) scale(.985);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
-.reveal.show{opacity:1;transform:none}
-.grid3 .reveal:nth-child(2){transition-delay:.06s}.grid3 .reveal:nth-child(3){transition-delay:.12s}
-.grid3 .reveal:nth-child(4){transition-delay:.18s}.grid3 .reveal:nth-child(5){transition-delay:.24s}.grid3 .reveal:nth-child(6){transition-delay:.30s}
-@keyframes coraPulse{0%,100%{opacity:.65;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.06)}}
-@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-.visual{animation:floatCard 8s ease-in-out infinite}
-@media(max-width:900px){
-  .hero{padding-top:92px}
-  .visual{margin-top:58px}
-  #demo .demo-chat{padding:18px}
-}
-@media(max-width:620px){
-  .hero{padding-top:76px}
-  .hero:before{width:500px;height:420px}
-  .visual{margin-top:48px}
-  .visual{animation:none}
-  #demo .demo-chat{padding:16px;border-radius:21px}
-  #demo .demo-messages{min-height:240px;max-height:52vh}
-  #demo .demo-compose{gap:7px}
-  #demo .demo-compose button{padding:0 14px}
-}
-@media(prefers-reduced-motion:reduce){
-  *,*:before,*:after{animation:none!important;transition:none!important}
-  html{scroll-behavior:auto}
-}
+:root{--bg:#060609;--bg2:#0a0a0f;--panel:#101016;--panel2:#15151d;--text:#f7f7f8;--muted:#a2a2ad;--line:rgba(255,255,255,.1);--purple:#8b6cff;--blue:#5c8dff;--green:#29d391;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,Arial,sans-serif;line-height:1.55;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;background:radial-gradient(700px 450px at 75% -5%,rgba(139,108,255,.18),transparent 65%),radial-gradient(650px 420px at -10% 28%,rgba(92,141,255,.09),transparent 65%)}body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000 0%,transparent 70%)}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a,input,select,textarea{outline-offset:4px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #ad99ff}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(6,6,9,.76);backdrop-filter:blur(22px);transition:.3s}.nav.scrolled{background:rgba(6,6,9,.95);box-shadow:0 15px 45px rgba(0,0,0,.3)}.navin{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:19px;font-weight:850;letter-spacing:-.04em}.brand span{color:#a891ff}.links{display:flex;gap:25px;color:#aaaab4;font-size:13px}.links a:hover{color:#fff}.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 18px;font-weight:750;border:1px solid var(--line);cursor:pointer;transition:.25s}.navcta,.btn.primary{background:#fff;color:#08080b;border-color:#fff}.navcta:hover,.btn.primary:hover{transform:translateY(-2px);box-shadow:0 15px 35px rgba(255,255,255,.12)}.btn.secondary{background:rgba(255,255,255,.045);color:#fff}.btn.secondary:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}.menu{display:none;background:none;color:#fff;border:0;font-size:23px}.mobilelinks{display:none;padding:0 0 18px}.mobilelinks a{display:block;padding:10px 0;color:#aaa}.hero{position:relative;padding:105px 0 75px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#cfc4ff;border:1px solid rgba(139,108,255,.25);background:rgba(139,108,255,.08);padding:7px 11px;border-radius:999px;font-size:11px;font-weight:850;letter-spacing:.11em;text-transform:uppercase}.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 16px rgba(41,211,145,.8)}.hero h1{font-size:clamp(52px,8vw,92px);line-height:.93;letter-spacing:-.075em;max-width:1050px;margin:24px auto 26px}.gradient{background:linear-gradient(105deg,#fff 15%,#c3b8ff 58%,#75e3ba 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:760px;margin:auto;color:#b0b0ba;font-size:19px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:30px 0 16px}.hero-note{font-size:12px;color:#777783}.hero-visual{position:relative;margin:65px auto 0;max-width:1060px;padding:10px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.018));box-shadow:0 45px 130px rgba(0,0,0,.45);animation:float 8s ease-in-out infinite}.hero-visual:before{content:"";position:absolute;inset:-1px;border-radius:31px;background:linear-gradient(120deg,rgba(139,108,255,.3),transparent 32%,rgba(41,211,145,.1),transparent 76%);pointer-events:none}.browser{position:relative;border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden;background:#0c0c12;text-align:left}.browserbar{height:42px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:7px;padding:0 14px}.ball{width:8px;height:8px;border-radius:50%;background:#4b4b54}.ball:nth-child(1){background:#ff6b6b}.ball:nth-child(2){background:#f3c84c}.ball:nth-child(3){background:#36ce7b}.url{margin-left:10px;color:#666671;font-size:10px}.browserbody{display:grid;grid-template-columns:1fr 390px;min-height:440px}.sitecopy{padding:58px}.mini{color:#927cff;font-size:10px;font-weight:850;letter-spacing:.13em;text-transform:uppercase}.sitecopy h3{font-size:clamp(34px,4vw,52px);line-height:.98;letter-spacing:-.06em;margin:12px 0}.sitecopy p{color:#91919d;max-width:520px}.mock-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.mock-pill{padding:9px 12px;border:1px solid rgba(255,255,255,.09);border-radius:999px;color:#b7b7c1;font-size:11px}.mock-chat{margin:32px 32px 32px 0;background:#f8f8fa;color:#111;border-radius:23px;padding:17px;box-shadow:0 30px 80px rgba(0,0,0,.4)}.mock-head{display:flex;align-items:center;gap:10px;border-bottom:1px solid #e0e0e5;padding-bottom:13px;font-weight:800}.avatar{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,#7657ff,#bcaaff);box-shadow:0 7px 20px rgba(124,77,255,.25)}.online{margin-left:auto;color:#5d8b72;font-size:10px}.bubble{padding:11px 12px;border-radius:14px;margin-top:11px;font-size:12px;line-height:1.45}.bubble.user{background:#e9e9ed;margin-left:22px}.bubble.ai{background:#f0ebff}.context{font-size:10px;color:#777;margin-top:10px}.section{padding:105px 0}.kicker{color:#9e87ff;font-size:11px;font-weight:850;letter-spacing:.14em;text-transform:uppercase}.sectionhead{max-width:760px;margin-bottom:45px}.center{text-align:center;margin-left:auto;margin-right:auto}.section h2{font-size:clamp(38px,5.4vw,66px);line-height:.98;letter-spacing:-.065em;margin:12px 0 18px}.sectionhead p{color:#a2a2ad;font-size:17px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{border:1px solid var(--line);border-radius:24px;padding:27px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));box-shadow:0 12px 40px rgba(0,0,0,.12);transition:.3s}.card:hover{transform:translateY(-5px);border-color:rgba(139,108,255,.3);box-shadow:0 22px 60px rgba(0,0,0,.2)}.icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:rgba(139,108,255,.11);border:1px solid rgba(139,108,255,.2);color:#bbaaff;font-weight:850}.card h3{font-size:21px;letter-spacing:-.03em;margin:22px 0 8px}.card p{margin:0;color:#92929d;font-size:14px}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px}.step{position:relative;padding:25px;border-top:1px solid rgba(255,255,255,.12)}.step:not(:last-child):after{content:"→";position:absolute;right:-8px;top:20px;background:var(--bg);color:#656571;padding:0 4px}.step b{display:block;margin:10px 0 4px}.step span{color:#888894;font-size:13px}.demo-shell{display:grid;grid-template-columns:.72fr 1.28fr;gap:16px}.demo-side .card{height:100%}.quick{display:flex;flex-direction:column;gap:9px;margin-top:17px}.quick button{width:100%;text-align:left;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);color:#bdbdc7;border-radius:13px;padding:12px;cursor:pointer;transition:.25s}.quick button:hover,.quick button.active{background:rgba(139,108,255,.1);border-color:rgba(139,108,255,.38);color:#fff;transform:translateX(3px)}.demo{border:1px solid #d7d7de;border-radius:26px;background:#fff;color:#111;padding:19px;box-shadow:0 25px 75px rgba(0,0,0,.28);min-height:570px;display:flex;flex-direction:column}.demo-head{display:flex;align-items:center;gap:10px;border-bottom:1px solid #e1e1e6;padding-bottom:15px}.demo-head b{font-size:15px}.demo-head small{margin-left:auto;color:#666;font-size:10px}.demo-msgs{flex:1;min-height:350px;max-height:460px;overflow:auto;padding:10px 4px}.msg{max-width:88%;padding:12px 13px;border-radius:16px;background:#f0f0f4;border:1px solid #dedee5;margin:10px 0;font-size:13px;line-height:1.48}.msg.user{margin-left:auto;background:#e7e7ec}.msg.ai{background:#f1edff;border-color:#d9ceff}.typing{display:inline-flex;gap:4px}.typing i{width:5px;height:5px;border-radius:50%;background:#777;animation:blink 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}@keyframes blink{50%{opacity:.25}}.compose{display:flex;gap:8px;border-top:1px solid #ededf0;padding-top:12px}.compose input{flex:1;min-width:0;padding:12px;border-radius:12px;border:1px solid #bbbcc4;background:#fff;color:#111}.compose button{border:0;border-radius:12px;background:#111;color:#fff;padding:0 16px;font-weight:800;cursor:pointer}.demo-note{font-size:10px;color:#707078;margin-top:8px}.compare{display:grid;grid-template-columns:1fr 1fr;gap:15px}.compare .card{min-height:230px}.compare .bad{border-color:rgba(255,100,120,.15)}.compare .good{border-color:rgba(41,211,145,.2)}.check{display:flex;gap:9px;margin:12px 0;color:#c7c7cf;font-size:14px}.check strong{color:#fff}.industries{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.industry{min-height:175px}.security{border:1px solid rgba(139,108,255,.2);border-radius:30px;padding:45px;background:linear-gradient(145deg,#12111a,#0b0b10);box-shadow:0 25px 90px rgba(0,0,0,.2)}.securitygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}.security small{color:#8f8f9b}.roi-shell{display:grid;grid-template-columns:1fr 1fr;gap:16px}.roi-panel{border-radius:26px;padding:29px;background:#f8f8fa;color:#111}.roi-panel.dark{background:linear-gradient(145deg,#11111a,#0b0b10);color:#fff;border:1px solid var(--line)}.roi-field{margin-bottom:20px}.roi-field label{display:flex;justify-content:space-between;gap:15px;font-size:13px;font-weight:750;margin-bottom:8px}.roi-field small{display:block;color:#777;font-size:11px;margin-top:5px}.roi-field input[type=range]{width:100%;accent-color:#7c5cff}.roi-field input[type=number],.roi-field select{width:100%;border:1px solid #d3d3da;border-radius:12px;padding:12px;background:#fff;color:#111}.roi-value{color:#7457d8;font-variant-numeric:tabular-nums}.roi-results{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.roi-card{border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.045);border-radius:17px;padding:17px}.roi-card span{display:block;color:#91919c;font-size:11px}.roi-card strong{display:block;font-size:25px;letter-spacing:-.04em;margin-top:5px}.roi-card.primary strong{color:#42dda2}.roi-note{font-size:11px;color:#777;margin-top:17px}.pricing{align-items:stretch}.pricecard{display:flex;flex-direction:column}.pricecard.pro{border-color:rgba(139,108,255,.55);box-shadow:0 25px 75px rgba(90,55,200,.14);position:relative;overflow:hidden}.pricecard.pro:before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#8b6cff,#5c8dff,#29d391)}.badge{display:inline-flex;width:max-content;padding:6px 9px;border-radius:999px;background:#26164f;color:#cbbdff;font-size:10px;font-weight:850;letter-spacing:.08em}.price{font-size:44px;font-weight:850;letter-spacing:-.06em;margin-top:20px}.per{font-size:12px;color:#7e7e89}.pricecard ul{padding:0;margin:24px 0 30px;list-style:none;color:#b7b7c1;font-size:14px}.pricecard li{margin:11px 0}.pricecard li:before{content:"✓";color:#a98fff;margin-right:9px}.pricecard .btn{margin-top:auto}.faq{max-width:900px;margin:auto}.faqitem{border-top:1px solid var(--line)}.faqq{width:100%;display:flex;justify-content:space-between;gap:20px;background:none;border:0;color:#fff;text-align:left;padding:21px 0;font-weight:750;cursor:pointer}.faqans{color:#92929d;padding:0 40px 21px 0;font-size:14px}.contact{display:grid;grid-template-columns:.75fr 1.25fr;gap:35px;align-items:start}.form{background:#f8f8fa;color:#111;border-radius:28px;padding:29px}.form h3{font-size:27px;margin:0 0 5px}.form-intro{color:#707078;font-size:12px;margin:0 0 20px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field.full{grid-column:1/-1}.field label{display:block;font-size:12px;font-weight:750;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #d2d2d9;border-radius:11px;padding:12px;background:#fff;color:#111}.field textarea{min-height:105px;resize:vertical}.form .btn{margin-top:16px;width:100%}.status{margin-top:12px;padding:11px;border-radius:11px;font-size:12px}.status.ok{background:#e5f8ee;color:#146b43}.status.err{background:#ffebeb;color:#a01d1d}.privacy{color:#777;font-size:10px}.hp{position:absolute!important;left:-9999px!important;opacity:0!important}.footer{border-top:1px solid var(--line);padding:42px 0;color:#777;font-size:12px}.footerin{display:flex;justify-content:space-between;gap:20px}.footerlinks{display:flex;gap:18px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}.reveal.show{opacity:1;transform:none}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}@media(max-width:900px){.links,.navcta{display:none}.menu{display:block}.mobilelinks.open{display:block}.browserbody,.demo-shell,.roi-shell,.contact{grid-template-columns:1fr}.mock-chat{margin:0 24px 24px}.sitecopy{padding:40px}.grid3,.industries,.securitygrid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.step:nth-child(2):after{display:none}.hero{padding-top:80px}.hero-visual{animation:none}}@media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 28px))}.hero{padding:70px 0 55px}.hero h1{font-size:clamp(45px,14vw,66px)}.hero p{font-size:17px}.hero-visual{margin-top:45px}.sitecopy{padding:30px}.sitecopy h3{font-size:34px}.mock-chat{margin:0 14px 14px}.section{padding:75px 0}.grid3,.industries,.securitygrid,.compare,.fields{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.step:after{display:none!important}.roi-results{grid-template-columns:1fr 1fr}.price{font-size:39px}.footerin{flex-direction:column}.actions .btn{width:100%}.demo{min-height:520px;padding:15px}.demo-msgs{min-height:310px;max-height:50vh}.compose input{font-size:16px}.compose button{min-width:52px}.security{padding:28px}.roi-panel{padding:22px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<nav class="nav">
-<div class="wrap navin">
-<a class="brand" href="#top">ACE <span>AI</span> AGENTS</a>
-<div class="links"><a href="#cora">Cora</a><a href="#demo">Demo</a><a href="#roi">ROI</a><a href="#branchen">Branchen</a><a href="#preise">Preise</a><a href="#sicherheit">Sicherheit</a><a href="#faq">FAQ</a></div>
-<a class="navcta" href="#kontakt">Cora anfragen</a>
-<button class="menu" id="menu" aria-expanded="false" aria-label="Menü">☰</button>
-</div>
-<div class="wrap mobilelinks" id="mobilelinks"><a href="#cora">Cora</a><a href="#demo">Demo</a><a href="#roi">ROI</a><a href="#branchen">Branchen</a><a href="#preise">Preise</a><a href="#sicherheit">Sicherheit</a><a href="#faq">FAQ</a><a href="#kontakt">Kontakt</a></div>
-</nav>
+<nav class="nav"><div class="wrap navin"><a class="brand" href="#top">ACE <span>AI</span> AGENTS</a><div class="links"><a href="#produkt">Cora</a><a href="#demo">Demo</a><a href="#roi">ROI</a><a href="#branchen">Branchen</a><a href="#preise">Preise</a><a href="#sicherheit">Sicherheit</a><a href="#faq">FAQ</a></div><a class="navcta" href="#kontakt">Cora anfragen</a><button class="menu" id="menu" aria-expanded="false" aria-label="Menü">☰</button></div><div class="wrap mobilelinks" id="mobilelinks"><a href="#produkt">Cora</a><a href="#demo">Demo</a><a href="#roi">ROI</a><a href="#branchen">Branchen</a><a href="#preise">Preise</a><a href="#sicherheit">Sicherheit</a><a href="#faq">FAQ</a><a href="#kontakt">Kontakt</a></div></nav>
 
 <main id="top">
-<header class="hero wrap">
-<div class="eyebrow">Cora AI · intelligente Website-Assistenz</div>
-<h1>Aus Ihrer Website wird ein <span class="gradient">digitaler Mitarbeiter.</span></h1>
-<p>Cora beantwortet Fragen, hilft Besuchern bei der Orientierung und nimmt relevante Anfragen direkt auf Ihrer Website entgegen.</p>
+<section class="hero"><div class="wrap">
+<div class="eyebrow"><i></i>Cora by ACE AI AGENTS · KI-Webassistenz</div>
+<h1>Ihre Website arbeitet.<br><span class="gradient">Cora führt den Dialog.</span></h1>
+<p>Fragen beantworten. Bedarf verstehen. Interessenten qualifizieren. Anfragen vorbereiten. Cora macht aus Ihrer Website einen digitalen Erstkontakt, der rund um die Uhr erreichbar ist.</p>
 <div class="actions"><a class="btn primary" href="#demo">Cora live erleben</a><a class="btn secondary" href="#roi">ROI berechnen</a></div>
-<div class="hero-note">Für Unternehmen, die aus Website-Besuchern mehr machen möchten.</div>
-<div class="visual reveal">
-<div class="browser">
-<div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-<div class="browserbody">
-<div class="sitecopy"><div class="mini-label">Musterunternehmen · Demo</div><h3>Ihre Kunden fragen. Cora antwortet.</h3><p>Ein Beispiel, wie ein Besucher auf einer Unternehmenswebsite durch ein Gespräch geführt und zu einer konkreten Anfrage begleitet werden kann.</p></div>
-<div class="chat"><div class="chathead"><div class="avatar"></div><span>Cora AI</span><small style="margin-left:auto;color:#777">Demo</small></div><div class="msg user">Ich brauche Beratung für unser Unternehmen.</div><div class="msg ai">Gerne. Ich kann zuerst einordnen, worum es geht, und anschließend die wichtigsten Informationen für eine Anfrage aufnehmen.</div><div class="chatinput">Cora-Demo · Gesprächsbeispiel</div></div>
-</div>
-</div>
-</div>
-</header>
+<div class="hero-note">Für Mittelstand, Dienstleister, Handwerk, Immobilien, Gastronomie und lokale Unternehmen.</div>
+<div class="hero-visual reveal"><div class="browser"><div class="browserbar"><i class="ball"></i><i class="ball"></i><i class="ball"></i><span class="url">musterunternehmen.de · Cora</span></div><div class="browserbody"><div class="sitecopy"><div class="mini">Musterunternehmen · Produktansicht</div><h3>Der Besucher fragt. Cora versteht den Kontext.</h3><p>Statt nur auf eine FAQ-Seite zu verweisen, kann Cora ein Gespräch führen, relevante Informationen einordnen und bei echtem Interesse den nächsten Schritt vorbereiten.</p><div class="mock-actions"><span class="mock-pill">Fragen beantworten</span><span class="mock-pill">Bedarf erkennen</span><span class="mock-pill">Lead vorbereiten</span></div></div><div class="mock-chat"><div class="mock-head"><div class="avatar"></div><span>Cora AI</span><span class="online">● Online</span></div><div class="bubble user">Wir suchen eine Lösung für unsere Website. Wie kann Cora helfen?</div><div class="bubble ai">Cora kann Besucher informieren, den Bedarf konkretisieren und bei Interesse eine strukturierte Anfrage vorbereiten.</div><div class="bubble ai">Was ist für Sie wichtiger: mehr qualifizierte Anfragen, weniger Standardfragen oder beides?</div><div class="context">Kontext erkannt · Ziel erkannt · nächster Schritt vorbereitet</div></div></div></div></div>
+</div></section>
 
-<section id="cora" class="section wrap">
-<div class="sectionhead center reveal"><div class="kicker">Das Produkt</div><h2>Nicht nur ein Chat. Eine zusätzliche digitale Schnittstelle zu Ihren Kunden.</h2><p>Cora verbindet Website-Inhalte, Dialog und Lead-Erfassung in einer klaren Nutzererfahrung.</p></div>
-<div class="grid3">
-<div class="card reveal"><div class="featureicon">01</div><h3>Fragen beantworten</h3><p>Wiederkehrende Fragen zu Leistungen, Abläufen und freigegebenen Unternehmensinformationen werden direkt auf der Website beantwortet.</p></div>
-<div class="card reveal"><div class="featureicon">02</div><h3>Interessenten qualifizieren</h3><p>Cora kann relevante Informationen abfragen, bevor eine Anfrage an Ihr Team weitergegeben wird.</p></div>
-<div class="card reveal"><div class="featureicon">03</div><h3>Anfragen erfassen</h3><p>Besucher können ihr Anliegen und Kontaktdaten strukturiert hinterlassen, statt einfach abzuspringen.</p></div>
-</div>
-</section>
+<section class="section"><div class="wrap reveal"><div class="sectionhead center"><div class="kicker">Der wirtschaftliche Hebel</div><h2>Eine Website kann informieren. Cora kann den nächsten Schritt organisieren.</h2><p>Viele Besucher haben Fragen, bevor sie bereit sind, ein Formular auszufüllen. Cora setzt genau an diesem Übergang an.</p></div><div class="grid3"><article class="card"><div class="icon">01</div><h3>Frage</h3><p>Der Besucher möchte wissen, ob Angebot, Leistung oder Lösung zu seinem Anliegen passt.</p></article><article class="card"><div class="icon">02</div><h3>Kontext</h3><p>Cora erkennt Branche, Anliegen und relevante Informationen aus dem Gespräch.</p></article><article class="card"><div class="icon">03</div><h3>Anfrage</h3><p>Bei echtem Interesse kann aus dem Dialog eine strukturierte Anfrage für Ihr Team werden.</p></article></div></div></section>
 
-<section id="funktionen" class="section wrap">
-<div class="sectionhead reveal"><div class="kicker">Funktionen</div><h2>Die wichtigsten Aufgaben. An einem Ort.</h2><p>Cora wird an Ihr Unternehmen, Ihre Inhalte und Ihren gewünschten Gesprächsablauf angepasst.</p></div>
-<div class="grid3">
-<div class="card reveal"><div class="featureicon">↗</div><h3>24/7 verfügbar</h3><p>Ihre Website kann auch außerhalb Ihrer Öffnungszeiten auf häufige Fragen reagieren.</p></div>
-<div class="card reveal"><div class="featureicon">◎</div><h3>Unternehmenswissen</h3><p>Antworten werden auf die von Ihnen bereitgestellten Informationen ausgerichtet.</p></div>
-<div class="card reveal"><div class="featureicon">→</div><h3>Lead-Erfassung</h3><p>Kontaktdaten und Anliegen können strukturiert aufgenommen und an Ihr System übergeben werden.</p></div>
-<div class="card reveal"><div class="featureicon">↔</div><h3>Übergabe an Menschen</h3><p>Komplexe oder nicht eindeutig beantwortbare Anliegen können für Ihr Team vorbereitet werden.</p></div>
-<div class="card reveal"><div class="featureicon">⌁</div><h3>Individuelle Dialoge</h3><p>Ton, Inhalte, Fragen und Gesprächslogik lassen sich an den jeweiligen Anwendungsfall anpassen.</p></div>
-<div class="card reveal"><div class="featureicon">▦</div><h3>Weiterentwickelbar</h3><p>Zusätzliche Integrationen und Prozesse können je nach Projekt individuell geplant werden.</p></div>
-</div>
-</section>
+<section id="produkt" class="section"><div class="wrap reveal"><div class="sectionhead"><div class="kicker">Cora</div><h2>Mehr als ein Chatfenster.</h2><p>Cora verbindet Unternehmenswissen, Dialog und Lead-Qualifizierung in einer einzigen Website-Erfahrung.</p></div><div class="grid3"><article class="card"><div class="icon">↗</div><h3>Fragen beantworten</h3><p>Leistungen, Abläufe, Öffnungszeiten und freigegebene Unternehmensinformationen verständlich erklären.</p></article><article class="card"><div class="icon">◎</div><h3>Bedarf verstehen</h3><p>Nicht jeder Besucher braucht dieselben Fragen. Der Dialog kann sich am bisherigen Gespräch orientieren.</p></article><article class="card"><div class="icon">→</div><h3>Leads qualifizieren</h3><p>Relevante Informationen erfassen, bevor Name, E-Mail oder Telefon abgefragt werden.</p></article><article class="card"><div class="icon">24</div><h3>24/7 erreichbar</h3><p>Auch abends und am Wochenende bleibt die erste Anlaufstelle Ihrer Website erreichbar.</p></article><article class="card"><div class="icon">↔</div><h3>Übergabe vorbereiten</h3><p>Komplexe oder kontaktintensive Anliegen können strukturiert für einen Menschen vorbereitet werden.</p></article><article class="card"><div class="icon">∞</div><h3>Individuell erweiterbar</h3><p>Gesprächslogik, Wissen, Branding und spätere Integrationen werden auf das Unternehmen zugeschnitten.</p></article></div></div></section>
 
-<section id="demo" class="section wrap">
-<div class="sectionhead center reveal"><div class="kicker">Interaktive Demo</div><h2>Kein FAQ-Menü. Ein echtes Beispielgespräch.</h2><p>Schreiben Sie Cora eine Nachricht. Die Demo behält den Gesprächskontext und reagiert auf Branche, Anliegen und Zahlen. Es wird keine echte Anfrage versendet.</p></div>
-<div class="demo">
-<div class="demo-options reveal">
-<button class="active" data-seed="Was kann Cora für mein Unternehmen tun?">Was kann Cora für mein Unternehmen tun?</button>
-<button data-seed="Ich betreibe einen Handwerksbetrieb.">Handwerk – Gespräch starten</button>
-<button data-seed="Wir bekommen etwa 80 Website-Anfragen im Monat.">Mit einer konkreten Zahl starten</button>
-<button data-seed="Was kostet Cora?">Was kostet Cora?</button>
-<button data-seed="Wie werden Leads erfasst?">Wie werden Leads erfasst?</button>
-<div class="card" style="margin-top:14px;padding:20px"><div class="kicker">Demo-Modus</div><p style="margin:8px 0 0;color:#92929d;font-size:13px">Die Demo verwendet eine lokale Gesprächslogik. Für einen produktiven Einsatz würde Cora mit den freigegebenen Unternehmensinformationen und den gewünschten Systemen verbunden.</p><button class="btn secondary" id="resetDemo" style="margin-top:14px;width:100%">Gespräch zurücksetzen</button></div>
-</div>
-<div class="card demo-chat reveal">
-<div class="chathead"><div class="avatar"></div><span>Cora AI</span><small style="margin-left:auto;color:#777">Interaktive Demo</small></div>
-<div class="demo-messages" id="demoMessages" aria-live="polite"></div>
-<div class="demo-compose"><input id="demoInput" type="text" autocomplete="off" placeholder="Schreiben Sie Cora …" aria-label="Nachricht an Cora"><button id="demoSend" type="button">Senden</button></div>
-<div style="font-size:11px;color:#777;margin-top:9px">Demo · keine echte Anfrage wird versendet</div>
-</div>
-</div>
-</section>
+<section class="section"><div class="wrap reveal"><div class="sectionhead center"><div class="kicker">So funktioniert es</div><h2>Vom ersten Satz bis zur verwertbaren Anfrage.</h2></div><div class="flow"><div class="step"><div class="kicker">01</div><b>Besucher</b><span>kommt mit einer Frage, einem Problem oder Kaufinteresse</span></div><div class="step"><div class="kicker">02</div><b>Cora</b><span>erkennt Sprache, Kontext und Anliegen</span></div><div class="step"><div class="kicker">03</div><b>Qualifizierung</b><span>fragt nur relevante Informationen ab</span></div><div class="step"><div class="kicker">04</div><b>Lead</b><span>bereitet den passenden nächsten Kontakt vor</span></div></div></div></section>
 
-<section id="roi" class="section wrap">
-<div class="sectionhead center reveal"><div class="kicker">ROI-Rechner</div><h2>Was könnte ein verlorener Website-Kontakt kosten?</h2><p>Erstellen Sie in weniger als einer Minute eine transparente Modellrechnung. Alle Annahmen können Sie selbst verändern.</p></div>
-<div class="roi-shell">
-<div class="roi-panel reveal">
-<div class="roi-field"><label for="roiIndustry">Branche</label><select id="roiIndustry"><option value="b2b">Dienstleister / Mittelstand</option><option value="handwerk">Handwerk</option><option value="restaurant">Restaurant / Gastronomie</option><option value="hotel">Hotel</option><option value="immobilien">Immobilien</option></select></div>
-<div class="roi-field"><label for="roiRequests">Website-Anfragen / Monat <span class="roi-value" id="roiRequestsVal">80</span></label><input id="roiRequests" type="range" min="10" max="1000" step="10" value="80"><small>Nutzen Sie Ihre tatsächliche oder geschätzte Zahl.</small></div>
-<div class="roi-field"><label for="roiMissed">Anteil verpasster / unbeantworteter Anfragen <span class="roi-value" id="roiMissedVal">20 %</span></label><input id="roiMissed" type="range" min="0" max="60" step="1" value="20"><small>Modellannahme – keine allgemeine Erfolgsquote von Cora.</small></div>
-<div class="roi-field"><label for="roiValue">Durchschnittlicher Wert eines gewonnenen Kunden <span class="roi-value" id="roiValueVal">500 €</span></label><input id="roiValue" type="number" min="1" max="100000" step="10" value="500"></div>
-<div class="roi-field"><label for="roiCatch">Geschätzte Auffangquote durch Cora <span class="roi-value" id="roiCatchVal">65 %</span></label><input id="roiCatch" type="range" min="0" max="100" step="1" value="65"><small>Ihre Annahme für die Modellrechnung. Keine garantierte Cora-Leistung.</small></div>
-<div class="roi-field"><label for="roiSupport">Optionale monatliche Support-/Telefonkosten <span class="roi-value" id="roiSupportVal">0 €</span></label><input id="roiSupport" type="number" min="0" max="100000" step="50" value="0"></div>
-</div>
-<div class="roi-panel dark reveal">
-<div class="kicker">Ihre Modellrechnung</div>
-<div class="roi-results">
-<div class="roi-card"><span>Zusätzliche Anfragen</span><strong id="roiRecovered">0</strong></div>
-<div class="roi-card primary"><span>Zusätzlicher Umsatz / Monat</span><strong id="roiRevenue">0 €</strong></div>
-<div class="roi-card"><span>Gesamtnutzen / Monat</span><strong id="roiBenefit">0 €</strong></div>
-<div class="roi-card"><span>Modellierter ROI</span><strong id="roiPercent">0 %</strong></div>
-<div class="roi-card"><span>Cora-Kosten / Monat</span><strong id="roiCost">495 €</strong></div>
-<div class="roi-card"><span>Payback Einrichtung</span><strong id="roiPayback">–</strong></div>
-</div>
-<div class="roi-cta"><p>Die Kernzahl ist sofort sichtbar. Wenn Sie die Rechnung mit Ihren Unternehmensdaten besprechen möchten:</p><a class="btn primary" href="#kontakt">Potenzialanalyse anfragen</a></div>
-<p class="roi-note">Modellrechnung auf Basis Ihrer Eingaben – keine Garantie. Tatsächliche Werte hängen unter anderem von Traffic, Anfragequalität, Angebot, Umsetzung und Konfiguration ab.</p>
-</div>
-</div>
-</section><section id="branchen" class="section wrap">
-<div class="sectionhead reveal"><div class="kicker">Für Unternehmen</div><h2>Wo Cora besonders sinnvoll sein kann.</h2><p>Der beste Anwendungsfall entsteht dort, wo Besucher häufig ähnliche Fragen stellen oder schnell den nächsten Schritt benötigen.</p></div>
-<div class="grid3">
-<div class="card industry reveal"><strong>Mittelstand</strong><p>Produkt- und Leistungsfragen beantworten und qualifizierte Website-Anfragen vorbereiten.</p></div>
-<div class="card industry reveal"><strong>Handwerk</strong><p>Leistungen erklären und Anfragen mit den wichtigen Eckdaten vorqualifizieren.</p></div>
-<div class="card industry reveal"><strong>Immobilien</strong><p>Objekt- und Leistungsfragen aufnehmen und Interessenten strukturiert zum Kontakt führen.</p></div>
-<div class="card industry reveal"><strong>Hotels & Gastronomie</strong><p>Häufige Fragen zu Öffnungszeiten, Angeboten, Reservierungen und Abläufen beantworten.</p></div>
-<div class="card industry reveal"><strong>Dienstleister</strong><p>Beratungsbedarf erkennen und Besucher zu einer konkreten Anfrage führen.</p></div>
-<div class="card industry reveal"><strong>Kanzleien & Beratung</strong><p>Erste allgemeine Fragen einordnen und relevante Kontaktdaten für eine Anfrage erfassen.</p></div>
-</div>
-</section>
+<section id="demo" class="section"><div class="wrap reveal"><div class="sectionhead center"><div class="kicker">Interaktive Produktdemo</div><h2>Testen Sie Cora wie einen echten Website-Besucher.</h2><p>Keine vorgefertigte Präsentation: Wählen Sie ein Szenario oder schreiben Sie frei. Die Demo erkennt Branchen und führt einfache Qualifizierungsdialoge durch.</p></div><div class="demo-shell"><div class="demo-side"><div class="card"><div class="kicker">Szenarien</div><h3>Starten Sie mit einem realen Anwendungsfall.</h3><div class="quick"><button data-prompt="Ich habe ein Fitnessstudio und möchte mehr Probetrainings.">Fitnessstudio · mehr Probetrainings</button><button data-prompt="Wir sind ein SHK-Betrieb und wollen Anfragen für Heizungen vorqualifizieren.">Handwerk · Heizungsanfragen</button><button data-prompt="Wir betreiben ein Restaurant und bekommen viele Fragen zu Reservierungen.">Restaurant · Reservierungen</button><button data-prompt="Ich bin Immobilienmakler und möchte Interessenten vor Besichtigungen qualifizieren.">Immobilien · Besichtigungen</button><button data-prompt="Wir verkaufen Software an Unternehmen und möchten mehr qualifizierte Anfragen.">B2B · qualifizierte Leads</button><button data-prompt="Ich habe eine Kanzlei. Wie kann Cora helfen?">Kanzlei · Erstkontakt</button></div><button class="btn secondary" id="resetDemo" style="width:100%;margin-top:14px;color:#fff">Demo zurücksetzen</button></div></div><div class="demo"><div class="demo-head"><div class="avatar"></div><b>Cora AI</b><small>Produktdemo · lokal im Browser</small></div><div class="demo-msgs" id="demoMessages" aria-live="polite"></div><div class="compose"><input id="demoInput" autocomplete="off" placeholder="Schreiben Sie Cora …" aria-label="Nachricht an Cora"><button id="demoSend" type="button">Senden</button></div><div class="demo-note">Diese Produktdemo ist eine lokale Simulation. Es wird keine echte Anfrage versendet.</div></div></div></div></section>
 
-<section class="section wrap">
-<div class="split">
-<div class="panel reveal"><div class="kicker">Ohne Cora</div><h3>Besucher → Frage → Warten → Absprung</h3><p>Ein Kontaktformular beantwortet keine Frage. Ein Besucher mit einer offenen Frage kann die Website verlassen, bevor überhaupt ein Kontakt entsteht.</p></div>
-<div class="panel reveal"><div class="kicker">Mit Cora</div><h3>Besucher → Dialog → Orientierung → Anfrage</h3><p>Cora kann direkt auf der Website helfen, Informationen abfragen und einen Besucher zum passenden nächsten Schritt führen.</p></div>
-</div>
-</section>
+<section class="section"><div class="wrap reveal"><div class="sectionhead center"><div class="kicker">Vorher / Nachher</div><h2>Der Unterschied liegt nicht in der Antwort. Sondern im nächsten Schritt.</h2></div><div class="compare"><article class="card bad"><div class="kicker">Ohne Cora</div><h3>Besucher → Frage → Suchen → Absprung</h3><div class="check">× <span>Der Besucher findet seine Antwort nicht sofort.</span></div><div class="check">× <span>Kontaktinformationen fehlen beim ersten Kontakt.</span></div><div class="check">× <span>Ihr Team erhält unstrukturierte Anfragen.</span></div></article><article class="card good"><div class="kicker">Mit Cora</div><h3>Besucher → Dialog → Orientierung → Anfrage</h3><div class="check">✓ <span>Fragen werden direkt im Gespräch eingeordnet.</span></div><div class="check">✓ <span>Bedarf und Kontaktabsicht können qualifiziert werden.</span></div><div class="check">✓ <span>Das Team kann mit mehr Kontext übernehmen.</span></div></article></div></div></section>
 
-<section id="sicherheit" class="section wrap">
-<div class="security reveal">
-<div class="kicker">Datenschutz & Sicherheit</div><h2>Technologie mit klaren Grenzen.</h2><p style="color:#a4a4ad;max-width:750px">Cora wird mit Blick auf den europäischen Geschäftseinsatz entwickelt. Datenschutz ist kein Marketing-Badge, sondern muss anhand des konkreten Systems, der Datenflüsse und des jeweiligen Einsatzes geprüft werden.</p>
-<div class="securitygrid">
-<div><strong>Datenminimierung</strong><br><small>Nur die für den jeweiligen Prozess erforderlichen Daten sollten verarbeitet werden.</small></div>
-<div><strong>Kontrollierbare Inhalte</strong><br><small>Unternehmenswissen und freigegebene Informationen bilden die Grundlage des Systems.</small></div>
-<div><strong>Transparente Umsetzung</strong><br><small>Technische und rechtliche Anforderungen werden je nach Projekt separat betrachtet.</small></div>
-</div>
-</div>
-</section>
+<section id="branchen" class="section"><div class="wrap reveal"><div class="sectionhead"><div class="kicker">Branchen</div><h2>Ein System. Unterschiedliche Gesprächslogiken.</h2><p>Cora kann auf Leistungen, Fragen und Abläufe des jeweiligen Unternehmens zugeschnitten werden.</p></div><div class="industries"><article class="card industry"><h3>Mittelstand</h3><p>B2B-Anfragen, Leistungen und Projektbedarf strukturiert einordnen.</p></article><article class="card industry"><h3>Handwerk</h3><p>Problem, Objekt, Standort und Dringlichkeit vor einem Rückruf erfassen.</p></article><article class="card industry"><h3>Immobilien</h3><p>Kauf, Verkauf, Besichtigung und Interessenteninformationen vorqualifizieren.</p></article><article class="card industry"><h3>Gastronomie & Hotel</h3><p>Reservierungsfragen, Angebote, Abläufe und Gruppenanfragen aufnehmen.</p></article><article class="card industry"><h3>Dienstleister</h3><p>Leistung, Bedarf und Projektumfang verstehen und zur Anfrage führen.</p></article><article class="card industry"><h3>Kanzlei & Beratung</h3><p>Erstkontakt organisatorisch vorbereiten, ohne individuelle Rechts- oder Steuerberatung vorzutäuschen.</p></article></div></div></section>
 
-<section id="preise" class="section wrap">
-<div class="sectionhead center reveal"><div class="kicker">Preise</div><h2>Transparent. Ohne versteckte Paketpreise.</h2><p>Einrichtung und laufende Kosten werden getrennt ausgewiesen.</p></div>
-<div class="grid3 pricing">
-<article class="card pricecard reveal"><div class="kicker">Cora Basic</div><div class="price">895 €</div><div class="per">einmalige Einrichtung</div><div class="price">495 €</div><div class="per">pro Monat</div><ul><li>KI-Webchat</li><li>Unternehmenswissen</li><li>Lead-Erfassung</li><li>Basis-Anpassung</li><li>Basis-Analytics</li></ul><a class="btn secondary" href="#kontakt">Basic anfragen</a></article>
-<article class="card pricecard pro reveal"><span class="badge">CORA PRO</span><div class="kicker" style="margin-top:18px">Cora Pro</div><div class="price">1.495 €</div><div class="per">einmalige Einrichtung</div><div class="price">895 €</div><div class="per">pro Monat</div><ul><li>Erweiterte Anpassung</li><li>Lead-Qualifizierung</li><li>Erweiterte Analytics</li><li>Individuelle Prozesse</li><li>Integrationen nach Vereinbarung</li></ul><a class="btn primary" href="#kontakt">Pro anfragen</a></article>
-<article class="card pricecard reveal"><div class="kicker">Cora Enterprise</div><div class="price">Auf Anfrage</div><div class="per">individuelle Einrichtung</div><div class="price">Individuell</div><div class="per">monatlich</div><ul><li>Individuelle Anforderungen</li><li>Komplexere Prozesse</li><li>Individuelle Integrationen</li><li>Projektbezogene Konfiguration</li><li>Individuelle Kalkulation</li></ul><a class="btn secondary" href="#kontakt">Enterprise anfragen</a></article>
-</div>
-</section>
+<section id="roi" class="section"><div class="wrap reveal"><div class="sectionhead center"><div class="kicker">ROI-Rechner</div><h2>Was könnte ein verlorener Website-Kontakt wert sein?</h2><p>Eine transparente Szenario-Rechnung mit Ihren eigenen Annahmen. Keine Erfolgs- oder Umsatzgarantie.</p></div><div class="roi-shell"><div class="roi-panel"><div class="roi-field"><label>Branche</label><select id="roiIndustry"><option value="b2b">Dienstleister / Mittelstand</option><option value="handwerk">Handwerk</option><option value="restaurant">Restaurant / Gastronomie</option><option value="hotel">Hotel</option><option value="immobilien">Immobilien</option></select></div><div class="roi-field"><label>Website-Anfragen / Monat <span class="roi-value" id="roiRequestsVal">80</span></label><input id="roiRequests" type="range" min="10" max="1000" step="10" value="80"></div><div class="roi-field"><label>Davon unbeantwortet / verloren <span class="roi-value" id="roiMissedVal">20 %</span></label><input id="roiMissed" type="range" min="0" max="60" step="1" value="20"></div><div class="roi-field"><label>Durchschnittlicher Kundenwert <span class="roi-value" id="roiValueVal">500 €</span></label><input id="roiValue" type="number" min="1" max="100000" step="10" value="500"></div><div class="roi-field"><label>Angenommene Auffangquote <span class="roi-value" id="roiCatchVal">65 %</span></label><input id="roiCatch" type="range" min="0" max="100" step="1" value="65"><small>Ihre Annahme für das Szenario – keine garantierte Cora-Leistung.</small></div></div><div class="roi-panel dark"><div class="kicker">Modellrechnung</div><div class="roi-results"><div class="roi-card"><span>potenziell zurückgewonnene Anfragen</span><strong id="roiRecovered">0</strong></div><div class="roi-card primary"><span>potenzieller Wert / Monat</span><strong id="roiRevenue">0 €</strong></div><div class="roi-card"><span>Cora Basic / Monat</span><strong>495 €</strong></div><div class="roi-card"><span>Einrichtung Basic</span><strong>895 €</strong></div></div><p class="roi-note">Rechenlogik: Anfragen × Anteil verloren × angenommene Auffangquote × Kundenwert. Die Rechnung dient der Einordnung und ersetzt keine individuelle Wirtschaftlichkeitsanalyse.</p><div class="card" style="margin-top:18px;padding:18px;background:rgba(255,255,255,.035)"><p style="color:#bdbdc7;margin:0;font-size:13px">Wenn der wirtschaftliche Hebel interessant aussieht, kann die Demo direkt als Gesprächseinstieg für einen individuellen Cora-Use-Case genutzt werden.</p><a class="btn primary" href="#kontakt" style="margin-top:13px">Cora für mein Unternehmen prüfen</a></div></div></div></div></section>
 
-<section id="faq" class="section wrap">
-<div class="sectionhead center reveal"><div class="kicker">FAQ</div><h2>Die wichtigsten Fragen vor dem Start.</h2></div>
-<div class="faq">
-<div class="faqitem"><button class="faqq" aria-expanded="false">Was ist Cora?<span>+</span></button><div class="faqans" hidden>Cora ist eine KI-Webassistenz, die Website-Besucher bei Fragen unterstützt und je nach Konfiguration Anfragen und Leads erfassen kann.</div></div>
-<div class="faqitem"><button class="faqq" aria-expanded="false">Wie wird Cora integriert?<span>+</span></button><div class="faqans" hidden>Die Integration erfolgt über ein Webchat-Widget. Der konkrete technische Ablauf wird abhängig von Website und gewünschtem Setup festgelegt.</div></div>
-<div class="faqitem"><button class="faqq" aria-expanded="false">Kann Cora individuelle Fragen beantworten?<span>+</span></button><div class="faqans" hidden>Ja, sofern die benötigten Informationen bereitgestellt und die Antwortlogik entsprechend konfiguriert wurden.</div></div>
-<div class="faqitem"><button class="faqq" aria-expanded="false">Kann Cora Leads erfassen?<span>+</span></button><div class="faqans" hidden>Das kann Bestandteil des Setups sein. Welche Felder und welche Weiterleitung genutzt werden, wird individuell festgelegt.</div></div>
-<div class="faqitem"><button class="faqq" aria-expanded="false">Ist Cora 24/7 verfügbar?<span>+</span></button><div class="faqans" hidden>Der Website-Assistent kann grundsätzlich rund um die Uhr erreichbar sein. Die tatsächliche Verfügbarkeit hängt vom jeweiligen Hosting- und Systemsetup ab.</div></div>
-<div class="faqitem"><button class="faqq" aria-expanded="false">Wie wird Datenschutz berücksichtigt?<span>+</span></button><div class="faqans" hidden>Datenschutz muss anhand der konkreten Datenflüsse, Anbieter, Zwecke und Konfiguration geprüft werden. Die Website verspricht daher keine pauschale „100 % DSGVO“-Garantie.</div></div>
-</div>
-</section>
+<section id="sicherheit" class="section"><div class="wrap"><div class="security reveal"><div class="kicker">Datenschutz & Sicherheit</div><h2>Technik mit klaren Grenzen.</h2><p style="max-width:760px;color:#a2a2ad">Cora wird datensparsam und mit Blick auf den europäischen Geschäftseinsatz konzipiert. Welche Daten verarbeitet werden, hängt vom konkreten Setup ab. Deshalb keine pauschalen „100 % DSGVO“-Versprechen.</p><div class="securitygrid"><div><b>Datenminimierung</b><br><small>Nur Informationen erfassen, die für den vorgesehenen Prozess benötigt werden.</small></div><div><b>Kontrollierbare Inhalte</b><br><small>Unternehmenswissen und freigegebene Informationen bilden die Grundlage.</small></div><div><b>Klare Datenflüsse</b><br><small>Speicherorte, Anbieter und Übergaben werden je Projekt festgelegt und geprüft.</small></div></div></div></div></section>
 
-<section id="kontakt" class="section wrap">
-<div class="contact">
-<div class="sectionhead reveal"><div class="kicker">Kontakt</div><h2>Zeigen Sie uns, wo Ihre Website heute Arbeit liegen lässt.</h2><p>Beschreiben Sie kurz Ihr Unternehmen und Ihren Anwendungsfall. Wir können anschließend prüfen, ob Cora dafür sinnvoll eingesetzt werden kann.</p></div>
-<form class="form reveal" id="leadForm" novalidate><h3>Cora anfragen</h3>
-<div class="fields">
-<div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required></div>
-<div class="field"><label for="company">Unternehmen *</label><input id="company" name="company" autocomplete="organization" required></div>
-<div class="field"><label for="email">E-Mail *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-<div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-<div class="field"><label for="company_size">Unternehmensgröße</label><select id="company_size" name="company_size"><option value="">Bitte auswählen</option><option>1–10 Mitarbeitende</option><option>11–50 Mitarbeitende</option><option>51–250 Mitarbeitende</option><option>251–1.000 Mitarbeitende</option><option>1.001+ Mitarbeitende</option></select></div>
-<div class="field"><label for="service">Interesse</label><select id="service" name="service"><option value="">Bitte auswählen</option><option>Cora Basic</option><option>Cora Pro</option><option>Cora Enterprise</option><option>Individuelle Beratung</option></select></div>
-<div class="field full"><label for="message">Anliegen *</label><textarea id="message" name="message" placeholder="Was möchten Sie mit Cora verbessern?" required></textarea></div>
-</div>
-<button class="btn primary" id="submit" type="submit">Anfrage senden</button>
-<div class="status" id="status" hidden></div>
-<p class="privacy">Ihre Angaben werden zur Bearbeitung Ihrer Anfrage verarbeitet. Vor dem produktiven Einsatz müssen Impressum und Datenschutzerklärung mit den tatsächlichen Daten und Verarbeitungen ergänzt werden.</p>
-</form>
-</div>
-</section>
+<section id="preise" class="section"><div class="wrap reveal"><div class="sectionhead center"><div class="kicker">Preise</div><h2>Transparent. Von Anfang an.</h2><p>Einrichtung und laufende Kosten getrennt ausgewiesen.</p></div><div class="grid3 pricing"><article class="card pricecard"><div class="kicker">Cora Basic</div><div class="price">895 €</div><div class="per">einmalige Einrichtung</div><div class="price">495 €</div><div class="per">pro Monat</div><ul><li>KI-Webchat</li><li>Unternehmenswissen</li><li>Lead-Erfassung</li><li>Basis-Anpassung</li><li>Basis-Analytics</li></ul><a class="btn secondary" href="#kontakt">Basic anfragen</a></article><article class="card pricecard pro"><span class="badge">CORA PRO</span><div class="kicker" style="margin-top:18px">Cora Pro</div><div class="price">1.495 €</div><div class="per">einmalige Einrichtung</div><div class="price">895 €</div><div class="per">pro Monat</div><ul><li>Erweiterte Anpassung</li><li>Lead-Qualifizierung</li><li>Erweiterte Analytics</li><li>Individuelle Prozesse</li><li>Integrationen nach Vereinbarung</li></ul><a class="btn primary" href="#kontakt">Pro anfragen</a></article><article class="card pricecard"><div class="kicker">Cora Enterprise</div><div class="price" style="font-size:36px">Auf Anfrage</div><div class="per">individuelle Einrichtung</div><div class="price" style="font-size:36px">Individuell</div><div class="per">monatlich</div><ul><li>Individuelle Anforderungen</li><li>Komplexere Prozesse</li><li>Individuelle Integrationen</li><li>Projektbezogene Konfiguration</li><li>Individuelle Kalkulation</li></ul><a class="btn secondary" href="#kontakt">Enterprise anfragen</a></article></div></div></section>
+
+<section id="faq" class="section"><div class="wrap"><div class="sectionhead center"><div class="kicker">FAQ</div><h2>Die wichtigsten Fragen vor dem Start.</h2></div><div class="faq"><div class="faqitem"><button class="faqq" aria-expanded="false">Was ist Cora?<span>+</span></button><div class="faqans" hidden>Cora ist eine KI-Webassistenz, die Website-Besucher bei Fragen unterstützt und je nach Konfiguration Bedarf und Leads qualifizieren kann.</div></div><div class="faqitem"><button class="faqq" aria-expanded="false">Wie wird Cora integriert?<span>+</span></button><div class="faqans" hidden>Als Webchat-Widget. Der genaue technische Ablauf hängt von Website, Daten und gewünschter Übergabe ab.</div></div><div class="faqitem"><button class="faqq" aria-expanded="false">Kann Cora individuelle Fragen beantworten?<span>+</span></button><div class="faqans" hidden>Ja, wenn die benötigten Unternehmensinformationen bereitgestellt und die Antwortlogik entsprechend konfiguriert wurden.</div></div><div class="faqitem"><button class="faqq" aria-expanded="false">Kann Cora Leads qualifizieren?<span>+</span></button><div class="faqans" hidden>Ja. Cora kann erst das Anliegen und den Bedarf klären und danach die relevanten Kontaktdaten aufnehmen.</div></div><div class="faqitem"><button class="faqq" aria-expanded="false">Ist Cora 24/7 verfügbar?<span>+</span></button><div class="faqans" hidden>Der Website-Assistent kann grundsätzlich rund um die Uhr erreichbar sein. Die tatsächliche Verfügbarkeit hängt vom jeweiligen technischen Setup ab.</div></div><div class="faqitem"><button class="faqq" aria-expanded="false">Ist Cora DSGVO-konform?<span>+</span></button><div class="faqans" hidden>Das lässt sich nicht pauschal behaupten. Datenarten, Anbieter, Speicherorte, Zwecke und Übergaben müssen für das konkrete Setup geprüft werden.</div></div></div></div></section>
+
+<section id="kontakt" class="section"><div class="wrap"><div class="contact"><div class="sectionhead reveal"><div class="kicker">Cora anfragen</div><h2>Zeigen Sie uns, wo Ihre Website heute Potenzial liegen lässt.</h2><p>Die Anfrage ist bewusst kurz. Wir erfassen nur Informationen, die helfen, den möglichen Cora-Use-Case einzuordnen.</p><div class="card" style="margin-top:25px"><div class="kicker">Für das Erstgespräch</div><p style="margin-top:9px">Branche · Website · Ziel · ungefähres Anfragevolumen · gewünschter Kontaktweg.</p></div></div><form class="form reveal" id="leadForm" novalidate><h3>Cora kennenlernen</h3><p class="form-intro">Unverbindliche Anfrage – kein automatischer Vertrag.</p><input class="hp" tabindex="-1" autocomplete="off" name="website_check"><div class="fields"><div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required></div><div class="field"><label for="company">Unternehmen *</label><input id="company" name="company" autocomplete="organization" required></div><div class="field"><label for="email">E-Mail *</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div><div class="field"><label for="website">Website</label><input id="website" name="website" type="url" placeholder="https://..."></div><div class="field"><label for="industry">Branche</label><select id="industry" name="industry"><option value="">Bitte auswählen</option><option>Mittelstand / B2B</option><option>Handwerk</option><option>Immobilien</option><option>Hotel / Gastronomie</option><option>Dienstleistung</option><option>Kanzlei / Beratung</option><option>Fitness / Gesundheit</option><option>Sonstige</option></select></div><div class="field"><label for="goal">Hauptziel</label><select id="goal" name="goal"><option value="">Bitte auswählen</option><option>Mehr qualifizierte Anfragen</option><option>Mehr Termine</option><option>Weniger Standardfragen</option><option>Lead-Qualifizierung</option><option>Website-Beratung / Orientierung</option><option>Individuelle Automatisierung</option></select></div><div class="field"><label for="monthly_requests">Website-Anfragen / Monat</label><select id="monthly_requests" name="monthly_requests"><option value="">Ungefähr</option><option>0–20</option><option>21–50</option><option>51–100</option><option>101–250</option><option>251+</option></select></div><div class="field"><label for="service">Interesse</label><select id="service" name="service"><option value="">Bitte auswählen</option><option>Cora Basic</option><option>Cora Pro</option><option>Cora Enterprise</option><option>Individuelle Beratung</option></select></div><div class="field full"><label for="message">Anliegen *</label><textarea id="message" name="message" placeholder="Was soll Cora auf Ihrer Website konkret übernehmen?" required></textarea></div></div><button class="btn primary" id="submit" type="submit">Anfrage senden</button><div class="status" id="status" hidden></div><p class="privacy">Die Angaben werden zur Bearbeitung der Anfrage verarbeitet. Die konkrete Datenschutz- und Löschlogik muss vor dem produktiven Geschäftsbetrieb anhand des tatsächlichen Setups festgelegt werden.</p></form></div></div></section>
 </main>
 
-<footer class="footer"><div class="wrap footerin"><div><strong style="color:#fff">ACE AI AGENTS</strong><br>Cora AI · Emre Akyıldız</div><div class="footerlinks"><a href="#kontakt">Kontakt</a><a href="#preise">Preise</a><a href="#rechtliches">Datenschutz</a><a href="#rechtliches">Impressum</a></div></div><div id="rechtliches" class="wrap" style="margin-top:28px;color:#555">Rechtliche Seiten sind als Platzhalter vorbereitet und müssen vor dem öffentlichen Geschäftsbetrieb mit den tatsächlichen Anbieter- und Datenschutzangaben ergänzt werden.</div></footer>
+<footer class="footer"><div class="wrap footerin"><div><strong style="color:#fff">ACE AI AGENTS</strong><br>Cora AI · Emre Akyıldız</div><div class="footerlinks"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="#preise">Preise</a><a href="#kontakt">Kontakt</a></div></div></footer>
 
 <script>
 "use strict";
-/* Always open the homepage at the top unless the URL explicitly targets a section. */
-try{history.scrollRestoration="manual"}catch(e){}
-function coraOpenAtTop(){
-  if(!window.location.hash){
-    window.scrollTo(0,0);
-    requestAnimationFrame(()=>window.scrollTo(0,0));
-  }
-}
-window.addEventListener("pageshow",coraOpenAtTop);
-window.addEventListener("load",coraOpenAtTop);
-
-/* Premium navigation state */
-const coraNav=document.querySelector(".nav");
-const updateNav=()=>coraNav?.classList.toggle("scrolled",window.scrollY>18);
-window.addEventListener("scroll",updateNav,{passive:true});
-updateNav();
-
-"use strict";
 const API="https://script.google.com/macros/s/AKfycbzDrLyFEsCVSVqLphU7fiCrNo_slakHFf6R8JSHvqT-5Lr6Y5uxyBQbNshS0uzUXSHa/exec";
+const nav=document.querySelector(".nav");window.addEventListener("scroll",()=>nav?.classList.toggle("scrolled",scrollY>18),{passive:true});
+const menu=document.getElementById("menu"),mobile=document.getElementById("mobilelinks");menu?.addEventListener("click",()=>{const open=mobile.classList.toggle("open");menu.setAttribute("aria-expanded",String(open))});mobile?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>mobile.classList.remove("open")));
+if("IntersectionObserver"in window){const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");ob.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll(".reveal").forEach(e=>ob.observe(e))}else document.querySelectorAll(".reveal").forEach(e=>e.classList.add("show"));
+document.querySelectorAll(".faqq").forEach(b=>b.addEventListener("click",()=>{const open=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!open));b.querySelector("span").textContent=open?"+":"−";b.nextElementSibling.hidden=open}));
 
-// Mobile navigation
-const menu=document.getElementById("menu"), mobile=document.getElementById("mobilelinks");
-if(menu&&mobile){menu.addEventListener("click",()=>{const open=menu.getAttribute("aria-expanded")==="true";menu.setAttribute("aria-expanded",String(!open));mobile.classList.toggle("open",!open)});mobile.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{menu.setAttribute("aria-expanded","false");mobile.classList.remove("open")}));}
-
-// FAQ
-document.querySelectorAll(".faqq").forEach(btn=>btn.addEventListener("click",()=>{const open=btn.getAttribute("aria-expanded")==="true";btn.setAttribute("aria-expanded",String(!open));btn.querySelector("span").textContent=open?"+":"−";btn.nextElementSibling.hidden=open}));
-
-// Scroll reveal
-if("IntersectionObserver" in window){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");observer.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll(".reveal").forEach(x=>observer.observe(x))}else document.querySelectorAll(".reveal").forEach(x=>x.classList.add("show"));
-
-// Cora demo state — context-aware local demo engine
-const APPS_SCRIPT_URL="https://script.google.com/macros/s/AKfycbzDrLyFEsCVSVqLphU7fiCrNo_slakHFf6R8JSHvqT-5Lr6Y5uxyBQbNshS0uzUXSHa/exec";
-const demoMessages=document.getElementById("demoMessages"),demoInput=document.getElementById("demoInput"),demoSend=document.getElementById("demoSend"),resetButton=document.getElementById("resetDemo");
-const STATE_KEY="cora_ai_demo_v5";
+const demoMessages=document.getElementById("demoMessages"),demoInput=document.getElementById("demoInput"),demoSend=document.getElementById("demoSend");
 const INDUSTRIES={
- fitness:{label:"Fitnessstudio",terms:["fitnessstudio","fitness","gym","muckibude","personal trainer","probetraining"],questions:["Was ist Ihr Hauptziel – Muskelaufbau, Abnehmen, Ausdauer oder allgemeine Fitness?","Geht es um Probetraining, Mitgliedschaft, Kurs oder Personal Training?","Wann möchten Sie ungefähr starten oder einen Termin wahrnehmen?"]},
- physio:{label:"Physiotherapie",terms:["physiotherapie","physio","physiotherapeut","krankengymnastik"],questions:["Geht es um einen Termin, eine Behandlung oder eine allgemeine Praxisfrage?","Sind Sie bereits Patient oder möchten Sie erstmals einen Termin?","Welcher Zeitraum wäre passend?"]},
- doctor:{label:"Arztpraxis",terms:["arztpraxis","hausarzt","facharzt","arzt","medizinisches zentrum"],questions:["Geht es um einen Termin oder eine organisatorische Frage?","Sind Sie bereits Patient oder neu in der Praxis?","Welcher Zeitraum wäre passend?"]},
- dental:{label:"Zahnarztpraxis",terms:["zahnarzt","zahnarztpraxis","zahnmedizin","zahnklinik"],questions:["Geht es um einen Termin, eine Behandlung oder eine organisatorische Frage?","Sind Sie bereits Patient oder neu in der Praxis?","Welcher Zeitraum wäre passend?"]},
- beauty:{label:"Beauty / Kosmetik",terms:["kosmetik","kosmetikstudio","beauty","nagelstudio","wimpernstudio","haarentfernung"],questions:["Welche Behandlung oder welches Ergebnis interessiert Sie?","Geht es um einen Termin oder zunächst um Beratung?","Wann wäre ein passender Zeitraum?"]},
- hair:{label:"Friseur / Barbershop",terms:["friseur","friseursalon","barbershop","haarschnitt","haar salon"],questions:["Welche Leistung wünschen Sie – Schnitt, Farbe, Styling oder etwas anderes?","Geht es um einen konkreten Termin?","Wann wäre ein passender Zeitraum?"]},
- restaurant:{label:"Restaurant / Café / Hotel",terms:["restaurant","gastronomie","cafe","café","gasthaus","hotel","pension","catering"],questions:["Geht es um eine Reservierung, eine allgemeine Frage oder eine Gruppenanfrage?","Für welchen Tag und wie viele Personen?","Welche Uhrzeit oder welcher Zeitraum ist gewünscht?"]},
- craft:{label:"Handwerk / SHK / Bau",terms:["handwerk","elektriker","sanitär","sanitaer","heizung","shk","dachdecker","maler","bauunternehmen","installateur","tischler","schreiner"],questions:["Welche Arbeit oder welches Problem soll bearbeitet werden?","Wo befindet sich das Objekt und wie dringend ist es?","Geht es um Reparatur, Wartung, Modernisierung oder ein Angebot?"]},
- realestate:{label:"Immobilien / Makler / Hausverwaltung",terms:["immobilien","immobilie","makler","immobilienmakler","hausverwaltung","wohnung","grundstück","grundstueck"],questions:["Suchen Sie zum Kauf, zur Miete oder möchten Sie verkaufen?","Welche Lage und Objektart kommt infrage?","Welches Budget oder welcher zeitliche Rahmen ist vorgesehen?"]},
- auto:{label:"Autohaus / Kfz",terms:["autohaus","autohandel","autowerkstatt","kfz","fahrzeug","gebrauchtwagen","probefahrt","leasing"],questions:["Geht es um Kauf, Leasing, Probefahrt, Inzahlungnahme oder Service?","Welches Fahrzeug bzw. welche Anforderungen sind relevant?","Wann möchten Sie ungefähr einen Termin oder Kauf anstreben?"]},
- law:{label:"Kanzlei / Rechtsberatung",terms:["kanzlei","rechtsanwalt","anwalt","rechtsberatung"],questions:["Welches Rechtsgebiet betrifft Ihr Anliegen ungefähr?","Geht es um eine Erstberatung oder einen bestehenden Fall?","Möchten Sie ein Erstgespräch anfragen?"]},
- tax:{label:"Steuerberatung",terms:["steuerberater","steuerberatung","steuerkanzlei","buchhaltung"],questions:["Geht es um private oder unternehmerische Themen?","Welche Leistung wird ungefähr benötigt?","Möchten Sie ein Erstgespräch anfragen?"]},
- software:{label:"Software / IT / SaaS",terms:["software","saas","it","softwareunternehmen","it dienstleister","webagentur"],questions:["Was möchten Sie lösen oder automatisieren?","Für wie viele Nutzer bzw. welches Team ist die Lösung gedacht?","Geht es um Beratung, Angebot oder konkrete Produktinformationen?"]},
- agency:{label:"Agentur / Beratung",terms:["agentur","marketingagentur","werbeagentur","digitalagentur","consulting","beratung"],questions:["Welche Leistung suchen Sie?","Was soll konkret verbessert oder erreicht werden?","Geht es um ein Projekt, laufende Betreuung oder ein Angebot?"]},
- ecommerce:{label:"E-Commerce",terms:["ecommerce","e commerce","onlineshop","online shop","webshop"],questions:["Was verkaufen Sie bzw. welche Produktgruppe ist relevant?","Geht es um mehr Verkäufe, Supportentlastung oder Leadgewinnung?","Welche Art von Anfrage soll Cora auf der Website übernehmen?"]},
- retail:{label:"Einzelhandel",terms:["einzelhandel","fachhandel","store","laden","geschäft","geschaeft"],questions:["Welche Produkte oder Leistungen suchen Ihre Kunden häufig?","Geht es eher um Beratung, Verfügbarkeit, Termin oder Verkauf?","Welche Anfrage soll Cora konkret übernehmen?"]},
- education:{label:"Bildung / Akademie",terms:["bildung","akademie","weiterbildung","sprachschule","nachhilfe","schule"],questions:["Für welches Angebot interessieren Sie sich?","Geht es um Kursinformation, Beratung oder Anmeldung?","Wann möchten Sie starten?"]},
- coaching:{label:"Coaching",terms:["coaching","coach","mentoring","trainer"],questions:["Welches Ziel möchten Sie erreichen?","Geht es um Erstgespräch, Programm oder allgemeine Informationen?","Wann wäre ein passender Zeitraum?"]},
- logistics:{label:"Logistik / Spedition",terms:["logistik","spedition","transport","fuhrunternehmen","lagerlogistik"],questions:["Welche Transport- oder Logistikleistung benötigen Sie?","Welche Strecke, Menge oder Frequenz ist ungefähr relevant?","Wann soll der Bedarf starten?"]},
- service:{label:"Dienstleistung / B2B",terms:["dienstleistung","dienstleister","b2b","versicherung","verwaltung","unternehmen"],questions:["Welche Leistung wird benötigt?","Was ist Ihr konkretes Ziel oder Problem?","Geht es um Beratung, Angebot oder Rückruf?"]}
+ fitness:{label:"Fitnessstudio",terms:["fitnessstudio","fitness","gym","probetraining","mitglied"],q:["Geht es vor allem um Probetraining, Mitgliedschaft, Kurse oder Personal Training?","Was ist für den Interessenten wichtiger: Termin, Preis oder ein bestimmtes Angebot?","Wann möchte die Person ungefähr starten?" ]},
+ craft:{label:"Handwerk / SHK",terms:["handwerk","shk","heizung","sanitaer","sanitär","elektriker","dachdecker","maler","installateur"],q:["Welche Arbeit oder welches Problem soll bearbeitet werden?","Wo befindet sich das Objekt und wie dringend ist es?","Geht es um Reparatur, Wartung, Modernisierung oder ein Angebot?"]},
+ restaurant:{label:"Restaurant / Gastronomie",terms:["restaurant","gastronomie","cafe","café","gasthaus","hotel"],q:["Geht es um eine Reservierung, eine allgemeine Frage oder eine Gruppenanfrage?","Für welchen Tag und wie viele Personen?","Welche Uhrzeit oder welcher Zeitraum ist gewünscht?"]},
+ realestate:{label:"Immobilien / Makler",terms:["immobilien","immobilie","makler","besichtigung","hausverwaltung"],q:["Geht es um Kauf, Miete oder Verkauf?","Welche Lage und Objektart kommt infrage?","Welcher Budget- oder Zeitrahmen ist vorgesehen?"]},
+ law:{label:"Kanzlei / Rechtsberatung",terms:["kanzlei","anwalt","rechtsanwalt","rechtsberatung"],q:["Welches Rechtsgebiet betrifft das Anliegen ungefähr?","Geht es um eine Erstberatung oder einen bestehenden Fall?","Soll ein Erstgespräch angefragt werden?"]},
+ b2b:{label:"Dienstleistung / B2B",terms:["b2b","dienstleistung","dienstleister","software","saas","agentur","beratung"],q:["Welche Leistung oder Lösung wird gesucht?","Was soll konkret verbessert oder erreicht werden?","Geht es um Beratung, Angebot oder einen konkreten Projektbedarf?"]}
 };
-let state=fresh();
-function fresh(){return{industry:null,companyType:null,companySize:null,location:null,customerType:null,need:null,goal:null,service:null,leadIntent:null,contactIntent:null,turns:0,questionIndex:0,flow:"",lead:{name:"",company:"",email:"",phone:""}}}
-function norm(t){return String(t||"").toLowerCase().replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss").replace(/[^a-z0-9+@.\s-]/g," ").replace(/\s+/g," ").trim()}
-function detectIndustry(text){
- const x=norm(text);let best=null,bestScore=0;
- for(const [id,d] of Object.entries(INDUSTRIES)){let score=0;for(const term of d.terms){const q=norm(term);if(x.includes(q))score+=q.length>7?4:2;}if(score>bestScore){best=id;bestScore=score;}}
- if(/heizung|sanitaer|sanitaer|shk|elektriker/.test(x))best="craft";
- if(/gym|fitness|muckibude|probetraining|mitglied/.test(x))best="fitness";
- if(/physio|krankengymnastik/.test(x))best="physio";
- if(/zahnarzt|zahnmedizin/.test(x))best="dental";
- if(/makler|immobilien|besichtigung/.test(x))best="realestate";
- return best;
-}
-function remember(t){
- const x=norm(t),ind=detectIndustry(t);
- if(ind){state.industry=ind;state.companyType=INDUSTRIES[ind].label;}
- const city=t.match(/\b(?:in|aus|bei)\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß-]+(?:\s+[A-ZÄÖÜ][A-Za-zÄÖÜäöüß-]+)?)\b/);if(city)state.location=city[1];
- if(/klein|kleine|kleiner|mitarbeiter|mitarbeitende/.test(x))state.companySize=t;
- if(/b2b|geschaeftskunden|geschäftskunden|firmenkunden|wiederverkaeufer|haendler|händler/.test(x))state.customerType=t;
- if(/mehr kunden|neukunden|neue kunden|kundengewinn|mehr leads|leadgener|qualifizierte leads|mehr anfragen|probetraining|termine gewinnen/.test(x))state.goal="mehr qualifizierte Kundenkontakte";
- if(/standardfragen|wiederkehrende fragen|immer dieselben fragen|faq/.test(x))state.goal="FAQ-/Standardfragen automatisieren";
- if(/telefon klingelt|zu viele anrufe|ausserhalb|außerhalb|24 7|nachts/.test(x))state.goal="Anfragen auch außerhalb der Öffnungszeiten bearbeiten";
- if(/angebot|bestellung|kaufen|beratung|termin|reservier|besichtigung|rueckruf|rückruf/.test(x))state.leadIntent="high";
- if(/email|e mail|mail|telefon|kontakt/.test(x))state.contactIntent="high";
-}
-function addMessage(role,text){const el=document.createElement("div");el.className="msg "+(role==="user"?"user":"ai");el.innerHTML=text;demoMessages.appendChild(el);demoMessages.scrollTop=demoMessages.scrollHeight}
-function typing(){const el=document.createElement("div");el.id="coraTyping";el.className="msg ai";el.innerHTML='<span class="typing"><i></i><i></i><i></i></span>';demoMessages.appendChild(el);demoMessages.scrollTop=demoMessages.scrollHeight}
-function buttons(items){return'<div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:12px">'+items.map(([label,action])=>'<button type="button" class="cora-action" data-action="'+action+'" style="border:1px solid #d3c9ff;background:#fff;color:#3d2b96;padding:8px 10px;border-radius:10px;font-weight:700;cursor:pointer">'+label+'</button>').join("")+"</div>"}
-function context(){return state.industry?'<div style="margin-top:10px;font-size:11px;color:#5f5f69"><b>Kontext erkannt:</b> '+INDUSTRIES[state.industry].label+(state.location?" · "+state.location:"")+"</div>":""}
-function intro(){
- const d=state.industry&&INDUSTRIES[state.industry];
- if(!d)return'Ich kann den konkreten Anwendungsfall direkt mit Ihnen durchspielen. Zum Beispiel: „Ich habe ein kleines Gym in Solingen und möchte mehr Probetrainings.“';
- const goal=state.goal?'<br><br><b>Ziel erkannt:</b> '+state.goal:'';
- return'Für <b>'+d.label+'</b> kann Cora Besucher nicht nur informieren, sondern das Anliegen verstehen, passende Rückfragen stellen und bei echtem Interesse eine strukturierte Anfrage vorbereiten.'+goal+context()+'<br><br><b>Typische Einsatzfälle:</b><br>• wiederkehrende Fragen automatisch beantworten<br>• Bedarf und Kauf-/Kontaktabsicht erkennen<br>• nur relevante Informationen abfragen<br>• qualifizierte Anfrage für den nächsten Kontakt vorbereiten'+buttons([["Use Case testen","START_QUAL"],["Preise","PRICE"],["Lead erfassen","START_LEAD"]]);
-}
-function qualifyStart(){
- const d=INDUSTRIES[state.industry];
- if(!d)return'Welche Branche oder welches Geschäftsmodell soll Cora unterstützen?';
- state.flow="qualify";state.questionIndex=0;
- return'<b>'+d.label+' – realistische Demo</b><br><br>'+d.questions[0]+context();
-}
-function qualifyAnswer(t){
- const d=INDUSTRIES[state.industry],raw=String(t||"").trim();
- if(!d)return intro();
- if(state.questionIndex===0){state.need=raw;state.service=raw;}
- else if(state.questionIndex===1){state.customerType=raw;}
- else state.contactIntent=raw;
- state.questionIndex++;
- if(state.questionIndex<d.questions.length)return'Verstanden. Ich berücksichtige „'+raw.replace(/[<>]/g,"")+'“. <br><br>'+d.questions[state.questionIndex];
- state.flow="";state.leadIntent="high";
- return'<b>Qualifizierung abgeschlossen.</b><br><br>✓ Branche: '+d.label+'<br>✓ Bedarf: '+(state.need||"erfasst")+'<br>✓ Kontext berücksichtigt<br>✓ Nächster Schritt definiert<br><br>Cora würde jetzt nicht weiterfragen, sondern den Kontakt nur dann aufnehmen, wenn tatsächlich Interesse besteht.'+buttons([["Anfrage vorbereiten","START_LEAD"],["Preise","PRICE"]]);
-}
-function leadStep(t){
- const x=String(t||"").trim().replace(/[<>]/g,"");
- if(!state.lead.name){state.lead.name=x;return'Danke. Wie heißt das Unternehmen?';}
- if(!state.lead.company){state.lead.company=x;return'Welche E-Mail-Adresse soll für die Anfrage verwendet werden?';}
- if(!state.lead.email){if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x))return"Bitte geben Sie eine gültige E-Mail-Adresse ein.";state.lead.email=x;return'Möchten Sie zusätzlich eine Telefonnummer hinterlegen? <b>Ja</b> oder <b>Nein</b>';}
- if(!state.lead.phone&&!/^nein$/i.test(x))state.lead.phone=x;
- state.flow="";
- return'<b>Anfrage vorbereitet.</b><br><br>✓ Bedarf erkannt<br>✓ Branche erkannt: '+(state.industry?INDUSTRIES[state.industry].label:"Unternehmen")+'<br>✓ Anliegen erfasst<br>✓ Kontaktdaten erfasst<br><br>Die Demo ist lokal und sendet diese Chatdaten nicht automatisch an ein Unternehmen. Für echte Cora-Installationen wird der Übergabeweg separat konfiguriert.<br><br><a href="#kontakt" style="font-weight:800;color:#4b35b8">Cora für mein Unternehmen konfigurieren →</a>';
-}
-function direct(t){
- const x=norm(t);
- if(/preis|preise|kosten|monat|setup|einrichtung/.test(x))return'Cora Basic: <b>895 €</b> Einrichtung + <b>495 €/Monat</b>.<br>Cora Pro: <b>1.495 €</b> Einrichtung + <b>895 €/Monat</b>.<br>Enterprise: individuell.<br><br>Die passende Konfiguration hängt vom gewünschten Gesprächs- und Integrationsumfang ab.';
- if(/dsgvo|datenschutz/.test(x))return'Datenschutz hängt vom konkreten Setup ab: Datenarten, Anbieter, Speicherort und Übergaben müssen geprüft werden. Cora kann datensparsam konfiguriert werden; eine pauschale DSGVO-Garantie wäre ohne Prüfung nicht seriös.';
- if(/integration|crm|kalender|api|n8n|hubspot|pipedrive/.test(x))return'Cora kann je nach Projekt an Formulare, E-Mail-Prozesse, CRM, Kalender oder Automatisierungen angebunden werden. Entscheidend ist, was nach einer qualifizierten Anfrage passieren soll.';
- if(/roi|umsatz|conversion|abschlussquote/.test(x))return'Der ROI-Rechner auf der Website ist eine Szenario-Rechnung. Er zeigt den möglichen wirtschaftlichen Hebel einer höheren Anfragequote und ist keine Umsatzgarantie.';
- if(/was kann|wie hilft|wie funktioniert|mehrwert|nutzen/.test(x))return state.industry?intro():'Cora beantwortet Fragen, erkennt den Kontext, qualifiziert Bedarf und führt Interessenten bei echtem Interesse zur passenden Anfrage.';
- if(/lead|kunden gewinnen|mehr kunden|anfrage|qualifiz/.test(x))return state.industry?qualifyStart():'Cora kann Leads schrittweise qualifizieren: Anliegen verstehen → Bedarf konkretisieren → relevante Informationen erfassen → Kontakt aufnehmen.';
- return null;
-}
-function answer(t){
- remember(t);state.turns++;
- if(state.flow==="lead")return leadStep(t);
- if(state.flow==="qualify")return qualifyAnswer(t);
- const d=direct(t);if(d)return d;
- if(state.industry)return intro();
- return'Welche Branche oder welches Geschäftsmodell möchten Sie testen? Sie können frei schreiben, z. B. „Ich habe ein Fitnessstudio in Solingen und möchte mehr Probetrainings.“';
-}
-function sendDemo(text){
- text=String(text||"").trim();if(!text||demoSend?.disabled)return;
- addMessage("user",text);demoInput.value="";if(demoSend)demoSend.disabled=true;typing();
- setTimeout(()=>{document.getElementById("coraTyping")?.remove();let out;try{out=answer(text)}catch(e){console.error(e);out="Die Demo konnte diese Eingabe gerade nicht verarbeiten. Bitte versuchen Sie es erneut."}addMessage("ai",out);bind();if(demoSend)demoSend.disabled=false;demoInput?.focus({preventScroll:true})},220);
-}
-function bind(){document.querySelectorAll(".cora-action").forEach(b=>{if(b.dataset.bound)return;b.dataset.bound="1";b.addEventListener("click",()=>{const a=b.dataset.action;if(a==="START_QUAL")sendDemo("Use Case testen");else if(a==="START_LEAD"){state.flow="lead";sendDemo("Anfrage vorbereiten")}else if(a==="PRICE")sendDemo("Preise");else sendDemo(b.textContent)})})}
-function resetDemo(){state=fresh();try{sessionStorage.removeItem(STATE_KEY)}catch(e){}if(demoMessages)demoMessages.innerHTML='<div class="msg cora">Hallo. Ich bin Cora. Testen Sie mich frei – zum Beispiel: „Ich habe ein Fitnessstudio. Wie kann Cora mir helfen?“</div>';demoInput?.focus({preventScroll:true});}
-demoSend?.addEventListener("click",()=>sendDemo(demoInput?.value||""));
-demoInput?.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();sendDemo(demoInput.value)}});
-document.querySelectorAll("[data-prompt]").forEach(b=>b.addEventListener("click",()=>sendDemo(b.dataset.prompt)));
-resetButton?.addEventListener("click",resetDemo);
-resetDemo();
+let state={industry:null,flow:null,qi:0,need:null,answers:[]};
+function norm(s){return String(s||"").toLowerCase().replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss").replace(/[^a-z0-9+@.\s-]/g," ").replace(/\s+/g," ").trim()}
+function detect(s){const x=norm(s);let best=null,score=0;for(const [id,d] of Object.entries(INDUSTRIES)){let n=0;d.terms.forEach(t=>{const q=norm(t);if(x.includes(q))n+=q.length>6?3:1});if(n>score){score=n;best=id}}return best}
+function add(role,text){const e=document.createElement("div");e.className="msg "+(role==="user"?"user":"ai");e.innerHTML=text;demoMessages.appendChild(e);demoMessages.scrollTop=demoMessages.scrollHeight}
+function typing(){const e=document.createElement("div");e.id="typing";e.className="msg ai";e.innerHTML='<span class="typing"><i></i><i></i><i></i></span>';demoMessages.appendChild(e);demoMessages.scrollTop=demoMessages.scrollHeight}
+function clean(s){return String(s).replace(/[<>]/g,"").slice(0,600)}
+function buttons(items){return '<div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:10px">'+items.map(x=>'<button type="button" data-demo="'+x[1]+'" style="border:1px solid #d5caff;background:#fff;color:#4634a5;padding:8px 10px;border-radius:10px;font-weight:750;cursor:pointer">'+x[0]+"</button>").join("")+"</div>"}
+function intro(){const d=state.industry&&INDUSTRIES[state.industry];if(!d)return "Welche Branche möchten Sie testen? Sie können frei schreiben, z. B. „Ich habe ein Fitnessstudio und möchte mehr Probetrainings.“";return "Für <b>"+d.label+"</b> kann Cora Besucher nicht nur informieren, sondern das Anliegen einordnen und bei echtem Interesse eine strukturierte Anfrage vorbereiten.<br><br><b>Typischer Ablauf:</b><br>• Frage beantworten<br>• Bedarf konkretisieren<br>• relevante Informationen erfassen<br>• passenden nächsten Schritt anbieten"+buttons([["Use Case testen","qualify"],["Preise","price"]])}
+function answer(text){const raw=clean(text),x=norm(raw),ind=detect(raw);if(ind){state.industry=ind}
+if(/preis|preise|kosten|monat|setup/.test(x))return "Cora Basic: <b>895 €</b> Einrichtung + <b>495 €/Monat</b>.<br>Cora Pro: <b>1.495 €</b> Einrichtung + <b>895 €/Monat</b>.<br>Enterprise: individuell.<br><br>Der konkrete Umfang hängt von Gesprächslogik, Wissen und gewünschten Übergaben ab.";
+if(/dsgvo|datenschutz/.test(x))return "Datenschutz hängt vom konkreten Setup ab: Datenarten, Anbieter, Speicherorte und Übergaben müssen geprüft werden. Cora wird datensparsam konfigurierbar geplant; eine pauschale DSGVO-Garantie wäre nicht seriös.";
+if(/integration|crm|kalender|n8n|api/.test(x))return "Cora kann je nach Projekt an bestehende Prozesse wie E-Mail, CRM, Kalender oder Automatisierungen angebunden werden. Entscheidend ist, was nach einer qualifizierten Anfrage passieren soll.";
+if(state.flow==="qualify"){const d=INDUSTRIES[state.industry];state.answers.push(raw);state.qi++;if(state.qi<d.q.length)return "Verstanden. Ich berücksichtige „"+raw+"“. <br><br>"+d.q[state.qi];state.flow=null;return "<b>Qualifizierung abgeschlossen.</b><br><br>Branche: "+d.label+"<br>Bedarf: "+(state.need||state.answers[0])+"<br>Weitere Angaben: "+state.answers.slice(1).join(" · ")+"<br><br>Cora würde jetzt nicht unnötig weiterfragen, sondern den passenden Kontaktweg anbieten."+buttons([["Cora anfragen","contact"],["Preise","price"]])}
+if(/was kann|wie hilft|mehrwert|nutzen|wie funktioniert/.test(x))return intro();
+if(/lead|kunden gewinnen|mehr kunden|qualifiz/.test(x)){if(!state.industry)return "Ja. Cora kann aus einem Website-Besucher schrittweise einen qualifizierten Kontakt machen. Welche Branche möchten Sie testen?";return intro()}
+if(!state.industry)return "Welche Branche oder welches Geschäftsmodell möchten Sie testen? Sie können z. B. Fitnessstudio, Handwerk, Restaurant, Immobilien, Kanzlei oder B2B schreiben.";
+return intro()}
+function send(text){text=String(text||"").trim();if(!text||demoSend.disabled)return;add("user",text);demoInput.value="";demoSend.disabled=true;typing();setTimeout(()=>{document.getElementById("typing")?.remove();let out;try{out=answer(text)}catch(e){out="Die Demo konnte die Eingabe gerade nicht verarbeiten."}add("ai",out);bindDemo();demoSend.disabled=false;demoInput.focus({preventScroll:true})},260)}
+function bindDemo(){document.querySelectorAll("[data-demo]").forEach(b=>{if(b.dataset.bound)return;b.dataset.bound="1";b.addEventListener("click",()=>{const a=b.dataset.demo;if(a==="qualify")send("Use Case testen");else if(a==="price")send("Preise");else if(a==="contact"){document.getElementById("kontakt")?.scrollIntoView({behavior:"smooth"});document.getElementById("message").value="Ich möchte Cora für mein Unternehmen prüfen."}else send(b.textContent)})})}
+function resetDemo(){state={industry:null,flow:null,qi:0,need:null,answers:[]};demoMessages.innerHTML='<div class="msg ai">Hallo. Ich bin Cora. Testen Sie mich frei – zum Beispiel: „Ich habe ein Fitnessstudio. Wie kann Cora mir helfen?“</div>';bindDemo()}
+document.querySelectorAll("[data-prompt]").forEach(b=>b.addEventListener("click",()=>send(b.dataset.prompt)));demoSend.addEventListener("click",()=>send(demoInput.value));demoInput.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();send(demoInput.value)}});document.getElementById("resetDemo").addEventListener("click",resetDemo);resetDemo();
 
-// ROI calculator
-const roi={industry:document.getElementById("roiIndustry"),requests:document.getElementById("roiRequests"),missed:document.getElementById("roiMissed"),value:document.getElementById("roiValue"),catchRate:document.getElementById("roiCatch"),support:document.getElementById("roiSupport")};
+const roi={industry:document.getElementById("roiIndustry"),requests:document.getElementById("roiRequests"),missed:document.getElementById("roiMissed"),value:document.getElementById("roiValue"),catchRate:document.getElementById("roiCatch")};
 const fmt=n=>new Intl.NumberFormat("de-DE",{maximumFractionDigits:0}).format(Math.max(0,n));
-function updateRoi(){
- const industry=roi.industry.value;
- const defaults={b2b:{requests:80,value:500},handwerk:{requests:60,value:900},restaurant:{requests:160,value:65},hotel:{requests:120,value:180},immobilien:{requests:40,value:3000}};
- const d=defaults[industry]||defaults.b2b;
- if(document.activeElement!==roi.requests && document.activeElement!==roi.value){roi.requests.value=d.requests;roi.value.value=d.value}
- const req=Math.max(0,Number(roi.requests.value)||0), missed=Math.max(0,Number(roi.missed.value)||0), val=Math.max(0,Number(roi.value.value)||0), catchRate=Math.max(0,Number(roi.catchRate.value)||0), support=Math.max(0,Number(roi.support.value)||0);
- const lost=req*missed/100, recovered=lost*catchRate/100, revenue=recovered*val, supportSaving=support*.5, benefit=revenue+supportSaving, cost=industry==="b2b"||industry==="handwerk"||industry==="immobilien"?495:495, roiPct=cost?((benefit-cost)/cost)*100:0, setup=industry==="b2b"||industry==="restaurant"||industry==="hotel"?895:895, payback=benefit>0?setup/benefit:0;
- document.getElementById("roiRequestsVal").textContent=fmt(req);
- document.getElementById("roiMissedVal").textContent=fmt(missed)+" %";
- document.getElementById("roiValueVal").textContent=fmt(val)+" €";
- document.getElementById("roiCatchVal").textContent=fmt(catchRate)+" %";
- document.getElementById("roiSupportVal").textContent=fmt(support)+" €";
- document.getElementById("roiRecovered").textContent=fmt(recovered);
- document.getElementById("roiRevenue").textContent=fmt(revenue)+" €";
- document.getElementById("roiBenefit").textContent=fmt(benefit)+" €";
- document.getElementById("roiPercent").textContent=(isFinite(roiPct)?fmt(roiPct):"0")+" %";
- document.getElementById("roiCost").textContent=fmt(cost)+" €";
- document.getElementById("roiPayback").textContent=benefit>0?payback.toLocaleString("de-DE",{maximumFractionDigits:1})+" Mon.":"–";
-}
-Object.values(roi).forEach(el=>el?.addEventListener("input",updateRoi));
-roi.industry?.addEventListener("change",()=>{const d={b2b:[80,500],handwerk:[60,900],restaurant:[160,65],hotel:[120,180],immobilien:[40,3000]}[roi.industry.value]||[80,500];roi.requests.value=d[0];roi.value.value=d[1];updateRoi()});
-updateRoi();
+function updateROI(){const r=+roi.requests.value||0,m=+roi.missed.value||0,v=+roi.value.value||0,c=+roi.catchRate.value||0;const recovered=r*m/100*c/100,revenue=recovered*v;document.getElementById("roiRequestsVal").textContent=fmt(r);document.getElementById("roiMissedVal").textContent=fmt(m)+" %";document.getElementById("roiValueVal").textContent=fmt(v)+" €";document.getElementById("roiCatchVal").textContent=fmt(c)+" %";document.getElementById("roiRecovered").textContent=fmt(recovered);document.getElementById("roiRevenue").textContent=fmt(revenue)+" €"}
+Object.values(roi).forEach(e=>e?.addEventListener("input",updateROI));roi.industry.addEventListener("change",()=>{const d={b2b:[80,500],handwerk:[60,900],restaurant:[160,65],hotel:[120,180],immobilien:[40,3000]}[roi.industry.value]||[80,500];roi.requests.value=d[0];roi.value.value=d[1];updateROI()});updateROI();
 
-// Contact form
-const form=document.getElementById("leadForm"), status=document.getElementById("status"), submit=document.getElementById("submit");
-let sending=false;
-form?.addEventListener("submit",async e=>{e.preventDefault();if(sending)return;const name=document.getElementById("name").value.trim(),company=document.getElementById("company").value.trim(),email=document.getElementById("email").value.trim(),message=document.getElementById("message").value.trim();if(!name||!company||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||!message){status.hidden=false;status.className="status error";status.textContent="Bitte füllen Sie die Pflichtfelder korrekt aus.";return}sending=true;submit.disabled=true;submit.textContent="Wird gesendet …";status.hidden=true;try{const p=new URLSearchParams({name,company,email,phone:document.getElementById("phone").value.trim(),company_size:document.getElementById("company_size").value,service:document.getElementById("service").value,message,source:"Cora Website"});await fetch(API,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},body:p.toString()});status.hidden=false;status.className="status success";status.textContent="Vielen Dank. Ihre Anfrage wurde zur Verarbeitung übermittelt.";form.reset()}catch(err){console.error(err);status.hidden=false;status.className="status error";status.textContent="Die Anfrage konnte gerade nicht übermittelt werden. Bitte versuchen Sie es erneut."}finally{sending=false;submit.disabled=false;submit.textContent="Anfrage senden"}});
+const form=document.getElementById("leadForm"),status=document.getElementById("status"),submit=document.getElementById("submit");
+form.addEventListener("submit",async e=>{e.preventDefault();if(!form.reportValidity())return;if(form.querySelector('[name="website_check"]').value)return;submit.disabled=true;submit.textContent="Wird gesendet …";status.hidden=true;try{const data=new URLSearchParams();new FormData(form).forEach((v,k)=>data.append(k,String(v)));data.set("source","Cora Website");data.set("page",location.href);data.set("submitted_at_client",new Date().toISOString());await fetch(API,{method:"POST",mode:"no-cors",body:data.toString(),headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"}});form.reset();status.hidden=false;status.className="status ok";status.textContent="Ihre Anfrage wurde übermittelt. Vielen Dank."}catch(err){console.error(err);status.hidden=false;status.className="status err";status.textContent="Die Anfrage konnte gerade nicht übermittelt werden. Bitte versuchen Sie es erneut."}finally{submit.disabled=false;submit.textContent="Anfrage senden"}});
 </script>
 </body>
 </html>
